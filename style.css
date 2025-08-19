@@ -213,6 +213,27 @@ header {
 }
 
 
+.emergencia-telefono{
+    margin: 5px; 
+    margin-left: 20px;
+}
+
+.sidebar .emergencia-telefono {
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+/* Cuando el menú se abre */
+.sidebar.menu-toggle .emergencia-telefono {
+    opacity: 1;
+    max-width: 200px; /* ajusta al espacio que necesites */
+    margin-left: 20px;
+}
+
+
 
 /*main*/
 main {
