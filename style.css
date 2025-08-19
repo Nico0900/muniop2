@@ -14,7 +14,8 @@
 
     --text-selected-color: #355CC0;
     --background-selected: #EBF0FF;
-    --backgroung-emergency-color: #de4848; /* color de contacto de emergencias */
+    --backgroung-emergency-color: #de4848;
+    /* color de contacto de emergencias */
     --background-hover: #F7F9FA;
 
     --border-color: #E6E9ED;
@@ -181,7 +182,8 @@ header {
 }
 
 .emergencia img {
-  filter: brightness(0) invert(1); /* lo convierte en blanco */
+    filter: brightness(0) invert(1);
+    /* lo convierte en blanco */
 }
 
 .sidebar a.selected {
@@ -189,15 +191,28 @@ header {
     background-color: var(--background-selected);
 }
 
-.sidebar a.search {
-    padding: 1rem 0.7rem;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 0.2rem;
-}
-
 .sidebar img {
     width: 1.6rem;
 }
+
+
+/* Menu */
+
+/* Botón menú */
+.menu-btn {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* animación suave */
+}
+
+/* Cuando el menú está abierto → rotamos */
+.menu-btn.rotated {
+    transform: rotate(90deg);
+}
+
+
 
 /*main*/
 main {
