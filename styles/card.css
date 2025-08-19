@@ -1,12 +1,9 @@
 /* Importing Google fonts - Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
-.container{
-    margin: 15px;
-}
-
 .wrapper {
     padding: 20px 10px;
+    margin: 15px;
     margin: 0 60px 35px;
     overflow: hidden;
 }
