@@ -1,9 +1,13 @@
 /* Importing Google fonts - Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
+.container{
+    padding: 50px;
+
+}
+
 .wrapper {
     padding: 20px 10px;
-    margin: 15px;
     margin: 0 60px 35px;
     overflow: hidden;
 }
@@ -163,12 +167,12 @@
 /* Swiper styles */
 .swiper-pagination {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   background: #ccc;
   opacity: 1;
   border-radius: 50%;
@@ -184,8 +188,8 @@
 .swiper-button-next {
   color: #6366f1;
   top: 45%;
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
 }
 
 .swiper-button-prev:hover,
