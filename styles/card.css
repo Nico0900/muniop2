@@ -1,0 +1,147 @@
+.card-slider {
+    margin-left: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+    /* quitamos padding lateral para controlarlo con los li */
+}
+
+.card-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* lista de cards → flex horizontal */
+.card-list {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0 20px;
+    /* margen lateral del contenedor */
+}
+
+/* items */
+.card-list .card-item {
+    flex: 0 0 auto;
+    width: 350px;
+    /* PC: ancho fijo */
+    scroll-snap-align: start;
+    background: #fff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.156);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+
+.card-list .card-item:hover {
+    border: 2px solid #000;
+}
+
+/* imágenes */
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* etiquetas */
+.card-list span {
+    display: inline-block;
+    background: #F7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.card-list .developer {
+    background-color: #F7DFF5;
+    color: #B22485;
+}
+
+.card-list .designer {
+    background-color: #d1e8ff;
+    color: #2968a8;
+}
+
+.card-list .editor {
+    background-color: #d6f8d6;
+    color: #205c20;
+}
+
+/* títulos */
+.card-item h3 {
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* flecha */
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item:hover .arrow {
+    background: #000;
+    color: #fff;
+}
+
+/* responsive */
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+
+    .card-slider {
+        margin-right: 20px;
+    }
+}
+
+/* en móviles: ocupar todo el ancho → solo 1 card visible */
+@media screen and (max-width: 768px) {
+    .card-list .card-item {
+        width: calc(100vw - 40px);
+        /* ancho pantalla menos padding lateral */
+    }
+
+    .card-slider {
+        margin-right: 20px;
+    }
+}
+
+/* puntitos de seguimiento (Dots) */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+.slider-dots .dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.slider-dots .dot.active {
+    background: #000;
+}
+
