@@ -20,24 +20,25 @@ fetch("../json/noticias.json")
             const preview = noticia.contenido[0].substring(0, 100) + "...";
 
             card.innerHTML = `
-        <div class="card-image">
-          <img src="${noticia.galeria[0]}" alt="${noticia.titulo}" />
-          <div class="card-tag">${noticia.tipo}</div>
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">${noticia.titulo}</h3>
-          <p class="card-text">${preview}</p>
-          <div class="card-footer">
-            <div class="card-profile">
-              <img src="${noticia.perfil}" alt="Perfil Noticia" />
-            </div>
-            <button class="card-button">Ver más</button>
-          </div>
-        </div>
-      `;
+                <div class="card-image">
+                    <img src="${noticia.galeria[0]}" alt="${noticia.titulo}" />
+                    <div class="card-tag">${noticia.tipo}</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">${noticia.titulo}</h3>
+                    <p class="card-text">${preview}</p>
+                    <div class="card-footer">
+                        <div class="card-profile">
+                            <img src="${noticia.perfil}" alt="Perfil Noticia" />
+                        </div>
+                        <button class="card-button" style="display:none;">Ver más</button>
+                    </div>
+                </div>
+            `;
             noticiasContainer.appendChild(card);
 
-            card.querySelector(".card-button").addEventListener("click", () => {
+            // Listener para toda la card
+            card.addEventListener("click", () => {
                 modalTitulo.textContent = noticia.titulo;
                 modalTipo.textContent = noticia.tipo;
                 modalPerfil.src = noticia.perfil;
@@ -53,38 +54,34 @@ fetch("../json/noticias.json")
                 // Galería
                 modalGaleria.innerHTML = ""; // Limpiar
                 if (noticia.galeria.length === 1) {
-                    // Solo una imagen
                     const img = document.createElement("img");
                     img.src = noticia.galeria[0];
                     img.alt = "Imagen noticia";
                     img.classList.add("modal-imagen");
                     modalGaleria.appendChild(img);
                 } else if (noticia.galeria.length > 1) {
-                    // Primera imagen arriba
                     const imgPrincipal = document.createElement("img");
                     imgPrincipal.src = noticia.galeria[0];
                     imgPrincipal.alt = "Imagen noticia";
                     imgPrincipal.classList.add("modal-imagen");
                     modalGaleria.appendChild(imgPrincipal);
 
-                    // Galería de las imágenes restantes
                     const galeriaExtras = document.createElement("div");
                     galeriaExtras.classList.add("swiper", "modal-swiper");
                     galeriaExtras.innerHTML = `
-                      <div class="swiper-wrapper">
-                        ${noticia.galeria.slice(1).map(img => `
-                          <div class="swiper-slide">
-                            <img src="${img}" alt="Imagen noticia" />
-                          </div>
-                        `).join('')}
-                      </div>
-                      <div class="swiper-pagination"></div>
-                      <div class="swiper-button-next"></div> 
-                      <div class="swiper-button-prev"></div>
+                        <div class="swiper-wrapper">
+                            ${noticia.galeria.slice(1).map(img => `
+                                <div class="swiper-slide">
+                                    <img src="${img}" alt="Imagen noticia" />
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div> 
+                        <div class="swiper-button-prev"></div>
                     `;
                     modalGaleria.appendChild(galeriaExtras);
 
-                    // Inicializar swiper solo si hay más de una imagen extra
                     if (modalSwiper) modalSwiper.destroy(true, true);
                     modalSwiper = new Swiper(".modal-swiper", {
                         slidesPerView: 1,
@@ -111,9 +108,10 @@ fetch("../json/noticias.json")
             loop: true,
             autoplay: { delay: 7000, disableOnInteraction: false },
             pagination: { el: ".swiper-pagination", clickable: true },
-            breakpoints: { 0: { slidesPerView: 1 }, 860: { slidesPerView: 2 }, 1400: { slidesPerView: 3 }, 1920: { slidesPerView: 4 }, 2100:{ slidesPerView: 6}}
+            breakpoints: { 0: { slidesPerView: 1 }, 860: { slidesPerView: 2 }, 1400: { slidesPerView: 3 }, 1920: { slidesPerView: 4 }, 2100: { slidesPerView: 6 } }
         });
     });
+
 
 // Cerrar modal
 spanClose.onclick = () => modal.style.display = "none";

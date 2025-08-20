@@ -17,10 +17,10 @@
     --icon-color-whatsapp: #ffffff;
     --backgroung-whatsapp-color: #10bb13;
 
-    
+
     --text-selected-color: #355CC0;
     --background-selected: #EBF0FF;
-    
+
     /* color de contacto de emergencias */
     --background-hover: #F7F9FA;
 
@@ -68,7 +68,6 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 20px;
-    box-sizing: border-box;
 }
 
 .banner-circulacion img {
@@ -77,13 +76,84 @@ header {
     border-radius: 15px;
 }
 
-/* A partir de 1330px -> agregar márgenes laterales */
-@media (max-width: 1330px) {
-    .banner-circulacion {
-        padding-left: 20px;
-        padding-right: 20px;
+/* Carrusel CSS puro */
+.carousel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    width: 500%;
+    /* 5 banners */
+    animation: slide 20s infinite;
+    /* ajustar tiempo según cantidad */
+}
+
+.carousel-track a {
+    width: 20%;
+    /* 100% / 5 banners */
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Animación para 5 banners */
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    16% {
+        transform: translateX(0%);
+    }
+
+    20% {
+        transform: translateX(-20%);
+    }
+
+    36% {
+        transform: translateX(-20%);
+    }
+
+    40% {
+        transform: translateX(-40%);
+    }
+
+    56% {
+        transform: translateX(-40%);
+    }
+
+    60% {
+        transform: translateX(-60%);
+    }
+
+    76% {
+        transform: translateX(-60%);
+    }
+
+    80% {
+        transform: translateX(-80%);
+    }
+
+    96% {
+        transform: translateX(-80%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
 }
+
+/* Imagenes responsivas */
+.carousel-track img {
+    width: 100%;
+    display: block;
+}
+
+
 
 
 
@@ -253,8 +323,8 @@ header {
 }
 
 
-.emergencia-telefono{
-    margin: 5px; 
+.emergencia-telefono {
+    margin: 5px;
     margin-left: 20px;
 }
 
@@ -269,12 +339,13 @@ header {
 /* Cuando el menú se abre */
 .sidebar.menu-toggle .emergencia-telefono {
     opacity: 1;
-    max-width: 200px; /* ajusta al espacio que necesites */
+    max-width: 200px;
+    /* ajusta al espacio que necesites */
     margin-left: 20px;
 }
 
-.whatsapp-telefono{
-    margin: 5px; 
+.whatsapp-telefono {
+    margin: 5px;
     margin-left: 20px;
 }
 
@@ -289,7 +360,8 @@ header {
 /* Cuando el menú se abre */
 .sidebar.menu-toggle .whatsapp-telefono {
     opacity: 1;
-    max-width: 200px; /* ajusta al espacio que necesites */
+    max-width: 200px;
+    /* ajusta al espacio que necesites */
     margin-left: 20px;
 }
 
@@ -340,4 +412,23 @@ main.menu-toggle {
         width: 100%;
         transform: rotate(45deg) translate(-0.2rem, -0.3rem);
     }
+}
+
+/* Por defecto se muestran en pantallas pequeñas */
+.sidebar-socials {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+/* Ocultar completamente en pantallas grandes (PC) */
+@media (min-width: 1024px) {
+    .sidebar-socials {
+        display: none;
+    }
+}
+
+.sidebar-socials a img {
+    width: 24px;
+    height: 24px;
 }

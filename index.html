@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/text-styles.css">
     <link rel="stylesheet" href="styles/card.css">
-    <link rel="stylesheet" href="/styles/banner.css">
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/links-interes.css">
+    <link rel="stylesheet" href="/styles/footer.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -111,12 +111,12 @@
                     <h4 class="emergencia-telefono">Nº de Emergencia</h4>
                     <a href="tel:+56957581718" class="emergencia">
                         <img src="src/icons/phone-call.svg" class="emergencia" alt="">
-                        <span>+56 9 57589 1718</span>
+                        <span>+56 9 2060 9847</span>
                     </a>
                 </li>
                 <li>
                     <h4 class="whatsapp-telefono">Nº de Whatsapp</h4>
-                    <a href="https://wa.me/957591718" class="whatsapp">
+                    <a href="https://wa.me/920609847" class="whatsapp">
                         <img src="src/icons/whatsapp-black.svg" class="whatsapp" alt="">
                         <span>Whatsapp emergencia</span>
                     </a>
@@ -136,6 +136,25 @@
                         <span>Mail Institucional</span>
                     </a>
                 </li>
+                <br>
+                <hr>
+                <!-- Redes Sociales (solo visible en pantallas pequeñas) -->
+                <li class="sidebar-socials">
+                    <a href="https://www.youtube.com/@MuniGranerosOficial" target="_blank">
+                        <img src="src/icons/youtube-black.svg" alt="youtube">
+                    </a>
+                    <a href="https://www.instagram.com/munigraneros/?utm_source=qr" target="_blank">
+                        <img src="src/icons/instagram-black.svg" alt="instagram">
+                    </a>
+                    <a href="https://www.facebook.com/munigraneros" target="_blank">
+                        <img src="src/icons/facebook-black.svg" alt="facebook">
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029VazSREqHwXb4LrelIc2I" target="_blank">
+                        <img src="src/icons/whatsapp-black.svg" alt="whatsapp">
+                    </a>
+                </li>
+
+
             </ul>
         </nav>
     </div>
@@ -146,22 +165,60 @@
             <img src="src/images/png/franja-inferior.png" alt="franja-inferior" width="100%">
         </section>
 
-        <!-- Permiso de circulación -->
-        <section class="banner-circulacion">
-            <a href="https://www.sem2.gob.cl/tramites/permisos-de-circulacion-2c/69080300/buscar" rel="external">
-                <picture>
-                    <!-- Imagen para pantallas grandes -->
-                    <source media="(min-width: 1024px)"
-                        srcset="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/3.png">
-                    <!-- Imagen para tablet y celular -->
-                    <source media="(max-width: 1023px)"
-                        srcset="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/2.png">
-                    <!-- Imagen por defecto si el navegador no soporta <picture> -->
-                    <img alt="Buscar" src="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/3.png" />
-                </picture>
-            </a>
-        </section>
+        <!-- Carrusel CSS puro -->
+        <section class="carousel">
+            <div class="carousel-track">
+                <!-- Permiso de circulación -->
+                <a href="https://www.sem2.gob.cl/tramites/permisos-de-circulacion-2c/69080300/buscar" rel="external">
+                    <picture>
+                        <source media="(min-width: 1024px)"
+                            srcset="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/3.png">
+                        <source media="(max-width: 1023px)"
+                            srcset="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/2.png">
+                        <img alt="Buscar" src="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/3.png" />
+                    </picture>
+                </a>
 
+                <!-- Horario de atención Dideco -->
+                <a href="src/pdf/Bases_Concurso_Publico_Programa_Red_Local_de_Apoyos_y_Cuidados_Graneros_2025_20_al_25_de_agosto_2025.pdf"
+                    target="_blank" rel="noopener noreferrer">
+                    <picture>
+                        <source media="(min-width: 1024px)"
+                            srcset="src/images/jpg/banners/horario-de-atencion-dideco-04.png">
+                        <source media="(max-width: 1023px)"
+                            srcset="src/images/jpg/banners/horario-de-atencion-dideco-05.png">
+                        <img src="src/images/jpg/banners/horario-de-atencion-dideco-04.png"
+                            alt="Horario de atención Dideco" />
+                    </picture>
+                </a>
+                
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeKE66ZGICCiHazzNOkjJML5fQPODVNlJaGI0X84uXvtLo6w/viewform" target="_blank" rel="noopener noreferrer">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="src/images/jpg/banners/poda_banner.jpg">
+                        <source media="(max-width: 1023px)" srcset="src/images/jpg/banners/poda_banner_pequeño.jpg">
+                        <img src="src/images/jpg/banners/poda_banner.jpg" alt="Horario de atención Dideco" />
+                    </picture>
+                </a>
+
+                <a href="https://forms.gle/QSFzRkR6f2HSd8Fi8" target="_blank" rel="noopener noreferrer">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="src/images/jpg/banners/retiro-escombros.jpg">
+                        <source media="(max-width: 1023px)"
+                            srcset="src/images/jpg/banners/retiro-escombros-pequeño.jpg">
+                        <img src="src/images/jpg/banners/retiro-escombros.jpg" alt="Horario de atención Dideco" />
+                    </picture>
+                </a>
+
+                <a href="https://forms.gle/2rszLu6QsEL9MRfp8" target="_blank" rel="noopener noreferrer">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="src/images/jpg/banners/N-emergencia_banner.jpg">
+                        <source media="(max-width: 1023px)"
+                            srcset="src/images/jpg/banners/N-emergencia_banner-pequeño.jpg">
+                        <img src="src/images/jpg/banners/N-emergencia_banner.jpg" alt="Horario de atención Dideco" />
+                    </picture>
+                </a>
+            </div>
+        </section>
 
         <!-- Noticias -->
         <section>
@@ -214,6 +271,50 @@
             </section>
 
         </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Izquierda: Enlaces útiles -->
+                <div class="footer-links">
+                    <h4>Enlaces útiles</h4>
+                    <a href="https://www.portaltransparencia.cl/PortalPdT/web/guest/directorio-de-organismos-regulados?p_p_id=pdtorganismos_WAR_pdtorganismosportlet&orgcode=f43f1d17f72036384669ba45ec911086"
+                        target="_blank">Solicitar Información</a>
+                    <a href="https://www.portaltransparencia.cl/PortalPdT/directorio-de-organismos-regulados/?org=MU100"
+                        target="_blank">Transparencia Activa</a>
+                    <a href="https://www.leylobby.gob.cl/instituciones/MU100" target="_blank">Ley del Lobby</a>
+                    <a href="https://www.bcn.cl/leychile/navegar?idNorma=1129283" target="_blank">Ley 21146</a>
+                </div>
+
+                <!-- Centro: Redes sociales -->
+                <div class="footer-socials-grid">
+                    <h4>Síguenos</h4>
+                    <div class="social-grid">
+                        <a href="https://www.youtube.com/@MuniGranerosOficial" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/munigraneros/?utm_source=qr" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/munigraneros" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/56957581718" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Derecha: Logo -->
+                <div class="footer-logo">
+                    <img src="src/images/png/logomun.png" alt="Logo Municipalidad" class="logo-footer">
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Municipalidad de Graneros. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+
+
+
+
 
     </main>
 

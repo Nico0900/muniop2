@@ -1,74 +1,98 @@
-/* footer.css */
-footer {
-    background-color: #ffffff; /* fondo blanco */
-    color: #000000; /* texto negro */
-    padding: 40px 20px;
+/* Footer general */
+.footer {
+    background-color: #fff;
+    /* Fondo blanco */
+    color: #000;
+    /* Letras negras */
     font-family: Arial, sans-serif;
-    text-align: center;
-    border-top: 1px solid #e0e0e0;
+    padding: 40px 20px 20px 20px;
 }
 
-/* Secciones internas del footer */
-footer .footer-container {
+/* Todos los enlaces en el footer */
+.footer a {
+    color: #000;
+    text-decoration: none;
+    /* Sin subrayado */
+}
+
+/* Eliminar hover en enlaces y redes sociales */
+.footer a:hover {
+    color: #000;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+/* Contenedor principal */
+.footer-container {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: space-around;
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-/* Columnas del footer */
-footer .footer-column {
-    flex: 1 1 200px;
-    min-width: 180px;
-}
-
-/* Títulos de columnas */
-footer .footer-column h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
+/* Izquierda: enlaces útiles */
+.footer-links h4 {
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
-/* Listas dentro del footer */
-footer .footer-column ul {
-    list-style: none;
-    padding: 0;
+.footer-links a {
+    display: block;
+    margin-bottom: 8px;
 }
 
-footer .footer-column ul li {
+/* Centro: redes sociales en cuadrícula 2x2 */
+.footer-socials-grid h4 {
     margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
 }
 
-footer .footer-column ul li a {
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 40px);
+    grid-gap: 10px;
+    justify-content: center;
 }
 
-footer .footer-column ul li a:hover {
-    color: #0073e6; /* color azul al pasar el mouse */
+.social-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: transparent;
+    /* Sin hover */
 }
 
-/* Iconos sociales */
-footer .social-icons {
-    margin-top: 20px;
+/* Derecha: logo */
+.footer-logo .logo-footer {
+    max-width: 150px;
 }
 
-footer .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-footer .social-icons img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Derechos de autor */
-footer .copyright {
+/* Footer inferior */
+.footer-bottom {
+    text-align: center;
     margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
     font-size: 14px;
-    color: #555555;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .social-grid {
+        justify-content: center;
+    }
 }
