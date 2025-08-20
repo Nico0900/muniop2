@@ -270,7 +270,10 @@ header {
 }
 
 
-
+iframe{
+    width: 100%;
+    height: auto;
+}
 
 /*main*/
 main {
