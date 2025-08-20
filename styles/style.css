@@ -63,6 +63,30 @@ header {
     gap: 1.4rem;
 }
 
+.banner-circulacion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.banner-circulacion img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* A partir de 1330px -> agregar márgenes laterales */
+@media (max-width: 1330px) {
+    .banner-circulacion {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
 /*Menu*/
 .menu-container {
     height: 100%;
