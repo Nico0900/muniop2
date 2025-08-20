@@ -11,10 +11,16 @@
 
     --text-color-emergency: #ffffff;
     --icon-color-emergency: #ffffff;
+    --backgroung-emergency-color: #de4848;
+
+    --text-color-whatsapp: #ffffff;
+    --icon-color-whatsapp: #ffffff;
+    --backgroung-whatsapp-color: #10bb13;
+
     
     --text-selected-color: #355CC0;
     --background-selected: #EBF0FF;
-    --backgroung-emergency-color: #de4848;
+    
     /* color de contacto de emergencias */
     --background-hover: #F7F9FA;
 
@@ -186,6 +192,16 @@ header {
     /* lo convierte en blanco */
 }
 
+.sidebar a.whatsapp {
+    color: var(--text-color-whatsapp);
+    background-color: var(--backgroung-whatsapp-color);
+}
+
+.whatsapp img {
+    filter: brightness(0) invert(1);
+    /* lo convierte en blanco */
+}
+
 .sidebar a.selected {
     color: var(--text-selected-color);
     background-color: var(--background-selected);
@@ -232,6 +248,27 @@ header {
     max-width: 200px; /* ajusta al espacio que necesites */
     margin-left: 20px;
 }
+
+.whatsapp-telefono{
+    margin: 5px; 
+    margin-left: 20px;
+}
+
+.sidebar .whatsapp-telefono {
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+/* Cuando el menú se abre */
+.sidebar.menu-toggle .whatsapp-telefono {
+    opacity: 1;
+    max-width: 200px; /* ajusta al espacio que necesites */
+    margin-left: 20px;
+}
+
 
 
 
