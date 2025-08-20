@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "titulo": "Titulo Noticia Ejemplo 1",
+    "tipo": "Tipo Noticia",
+    "imagen": "src/images/jpg/N_FIRMA INJUV.JPG",
+    "perfil": "src/images/png/logomun.png",
+    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+  },
+  {
+    "id": 2,
+    "titulo": "Titulo Noticia Ejemplo 2",
+    "tipo": "Tipo Noticia",
+    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
+    "perfil": "src/images/png/logomun.png",
+    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+  },
+  {
+    "id": 3,
+    "titulo": "Titulo Noticia Ejemplo 3",
+    "tipo": "Tipo Noticia",
+    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
+    "perfil": "src/images/png/logomun.png",
+    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+  },
+  {
+    "id": 4,
+    "titulo": "Titulo Noticia Ejemplo 4",
+    "tipo": "Tipo Noticia",
+    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
+    "perfil": "src/images/png/logomun.png",
+    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+  },
+  {
+    "id": 5,
+    "titulo": "Titulo Noticia Ejemplo 5",
+    "tipo": "Tipo Noticia",
+    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
+    "perfil": "src/images/png/logomun.png",
+    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+  },
+  {
+    "id": 6,
+    "titulo": "Titulo Noticia Ejemplo 6",
+    "tipo": "Tipo Noticia",
+    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
+    "perfil": "src/images/png/logomun.png",
+    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+  },
+  {
+    "id": 7,
+    "titulo": "Titulo Noticia Ejemplo 7",
+    "tipo": "Tipo Noticia",
+    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
+    "perfil": "src/images/png/logomun.png",
+    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+  }
+]
