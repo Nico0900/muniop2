@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
 .container{
-    padding: 50px;
+    padding: 20px;
 
 }
 
@@ -13,7 +13,7 @@
 }
 
 .wrapper .card {
-    width: 350px;
+    width: 200px;
     background: #fff;
     display: flex;
     height: auto;
@@ -184,25 +184,11 @@
   background: #007bff;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: #6366f1;
-  top: 45%;
-  width: 50px;
-  height: 50px;
-}
-
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  color: #8b5cf6;
-}
-
 /* Opcional: ocultar solo en móvil */
 @media (max-width: 480px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
-  }
+    .swiper-pagination {
+        display: none;
+    }
 }
 
 
