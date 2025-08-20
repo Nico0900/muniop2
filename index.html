@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/banners.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/card.css">
+    <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/links-interes.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -193,6 +194,7 @@
 
         </section>
 
+        <!-- Noticias -->
         <section>
             <div class="container">
                 <h2>Noticias</h2>
@@ -211,6 +213,21 @@
 
     </footer>
 
+    <!-- Modal Noticia -->
+    <div id="modal-noticia" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <span id="modal-tipo" class="tipo-noticia"></span>
+            <img id="modal-imagen" alt="Imagen Noticia" class="modal-imagen" />
+            <p id="modal-contenido"></p>
+            <div class="modal-footer">
+                <img id="modal-perfil" alt="Perfil Noticia" />
+                <span>Fuente oficial</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/controllers/banners.js"></script>
@@ -218,7 +235,6 @@
     <script src="/controllers/noticias.js"></script>
     <!-- Tu script -->
     <script src="/controllers/script.js"></script>
-
 </body>
 
 </html>

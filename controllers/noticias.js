@@ -1,12 +1,18 @@
-// Obtener el contenedor
 const noticiasContainer = document.getElementById("noticias-container");
 
-// Cargar noticias desde el JSON
+// Modal elementos
+const modal = document.getElementById("modal-noticia");
+const modalTitulo = document.getElementById("modal-titulo");
+const modalTipo = document.getElementById("modal-tipo");
+const modalImagen = document.getElementById("modal-imagen");
+const modalContenido = document.getElementById("modal-contenido");
+const modalPerfil = document.getElementById("modal-perfil");
+const spanClose = document.querySelector(".close");
+
 fetch("../json/noticias.json")
     .then(response => response.json())
     .then(data => {
         data.forEach(noticia => {
-            // Crear la estructura HTML de la card
             const card = document.createElement("div");
             card.classList.add("card", "swiper-slide");
             card.innerHTML = `
@@ -21,14 +27,24 @@ fetch("../json/noticias.json")
                 <div class="card-profile">
                     <img src="${noticia.perfil}" alt="Perfil Noticia" />
                 </div>
-                <a href="Noticia.html?id=${noticia.id}" class="card-button">Ver más</a>
+                <button class="card-button">Ver más</button>
             </div>
         </div>
       `;
             noticiasContainer.appendChild(card);
+
+            // Evento para abrir modal
+            card.querySelector(".card-button").addEventListener("click", () => {
+                modalTitulo.textContent = noticia.titulo;
+                modalTipo.textContent = noticia.tipo;
+                modalImagen.src = noticia.imagen;
+                modalContenido.textContent = noticia.contenido;
+                modalPerfil.src = noticia.perfil;
+                modal.style.display = "block";
+            });
         });
 
-        // Inicializar Swiper después de crear las cards
+        // Inicializar Swiper
         const swiper = new Swiper(".swiper", {
             slidesPerView: 3,
             spaceBetween: 20,
@@ -52,5 +68,10 @@ fetch("../json/noticias.json")
                 1920: { slidesPerView: 5 }
             },
         });
-    })
-    .catch(error => console.error("Error cargando noticias:", error));
+    });
+
+// Cerrar modal
+spanClose.onclick = () => modal.style.display = "none";
+window.onclick = event => {
+    if (event.target == modal) modal.style.display = "none";
+};
