@@ -24,18 +24,20 @@
     position: relative;
 }
 
+/* Galería dentro del modal */
 .modal-galeria {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 10px;
-    grid-auto-flow: dense;
+    gap: 15px;
     margin-top: 20px;
 }
 
 .modal-galeria img {
     width: 100%;
+    height: auto;
+    border-radius: 8px;
     display: block;
-    border-radius: 6px;
+    object-fit: cover;
 }
 
 /* Botón cerrar */
@@ -50,7 +52,7 @@
     transition: color 0.2s;
 }
 
-º .close:hover {
+.close:hover {
     color: #000;
 }
 
