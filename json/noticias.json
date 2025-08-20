@@ -33,7 +33,7 @@
   {
     "id": 3,
     "titulo": "GRANEROS VIVIÓ LA MAGIA DE PINOCHO EN SU PLAZA DE ARMAS",
-    "tipo": "Tipo Noticia",
+    "tipo": "Informativa",
     "perfil": "src/images/png/logomun.png",
     "contenido": [
       "Una tarde llena de sonrisas, cultura y entretención disfrutaron las familias granerinas con la presentación de la obra de teatro Pinocho, que convocó a numerosos niños, niñas y vecinos en la Plaza de Armas de la comuna.",
@@ -49,7 +49,7 @@
   {
     "id": 4,
     "titulo": "MUNICIPIO DE GRANEROS IMPULSA CICLO DE CAPACITACIONES PARA JEFAS DE HOGAR JUNTO AL INSTITUTO SANTO TOMÁS",
-    "tipo": "Tipo Noticia",
+    "tipo": "Informativa",
     "perfil": "src/images/png/logomun.png",
     "contenido": [
       "En una jornada especial realizada en las dependencias del Instituto Santo Tomás, las vecinas que integran el Programa Jefas de Hogar recibieron la bienvenida oficial al nuevo ciclo de capacitaciones, instancia que busca entregar herramientas para fortalecer su desarrollo personal y laboral.",
@@ -63,17 +63,16 @@
   },
   {
     "id": 5,
-    "titulo": "MUNICIPIO DE GRANEROS IMPULSA CICLO DE CAPACITACIONES PARA JEFAS DE HOGAR JUNTO AL INSTITUTO SANTO TOMÁS",
-    "tipo": "Tipo Noticia",
+    "titulo": "MUNICIPIO DE GRANEROS ENTREGA SUBVENCIÓN AL CUERPO DE BOMBEROS",
+    "tipo": "Informativa",
     "perfil": "src/images/png/logomun.png",
     "contenido": [
-      "En una jornada especial realizada en las dependencias del Instituto Santo Tomás, las vecinas que integran el Programa Jefas de Hogar recibieron la bienvenida oficial al nuevo ciclo de capacitaciones, instancia que busca entregar herramientas para fortalecer su desarrollo personal y laboral.",
-      "La iniciativa es posible gracias al trabajo conjunto entre la Municipalidad de Graneros, el Servicio Nacional de la Mujer y Equidad de Género (SERNAMEG) y el Instituto Santo Tomás, permitiendo que mujeres emprendedoras accedan a formación para potenciar sus negocios, adquirir nuevas habilidades y abrir mayores oportunidades para ellas y sus familias.",
-      "El alcalde Marcelo Miñañir destacó la impo rtancia del programa: “Para nosotros es fundamental apoyar a nuestras mujeres jefas de hogar, porque su esfuerzo y talento son clave en la construcción de un Graneros con más oportunidades y desarrollo”.",
-      "Con este ciclo de capacitaciones, el municipio reafirma su compromiso con las mujeres emprendedoras, entregándoles respaldo y acompañamiento en cada paso de su crecimiento."
+      "En una muestra de apoyo concreto a quienes protegen la vida y seguridad de la comuna, la Municipalidad de Graneros entregó una nueva subvención al Cuerpo de Bomberos.",
+      "El Alcalde Marcelo Miñañir, junto al concejal Carlos Ávila, encabezó la ceremonia de entrega de los recursos, aprobados por el Honorable Concejo Municipal. Esta ayuda busca fortalecer el trabajo voluntario de los bomberos y bomberas, esenciales para la seguridad y bienestar de los vecinos y vecinas.",
+      "Desde el municipio destacaron que este aporte es también un reconocimiento a la entrega desinteresada de quienes siempre acuden donde más se les necesita."
     ],
     "galeria": [
-      "src/images/Santo Tomás/Alcalde y Mujeres de Graneros.jpg"
+      "src/images/jpg/Bomberos.jpg"
     ]
   }
 ]
