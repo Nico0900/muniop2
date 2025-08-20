@@ -1,58 +1,80 @@
 [
   {
     "id": 1,
-    "titulo": "Titulo Noticia Ejemplo 1",
-    "tipo": "Tipo Noticia",
-    "imagen": "src/images/jpg/N_FIRMA INJUV.JPG",
+    "titulo": "TRAS VARIOS AÑOS ESPERANDO, MUNICIPIO DE GRANEROS ENTREGA EN COMODATO CANCHA AL CLUB DEPORTIVO SINDICATO",
+    "tipo": "Informativa",
     "perfil": "src/images/png/logomun.png",
-    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+    "contenido": [
+      "Tras una larga espera, el Club Deportivo Sindicato Graneros recibió un impulso histórico: el Concejo Municipal aprobó la entrega en comodato de su cancha, asegurando por primera vez un espacio propio y seguro para la práctica deportiva, en el marco de su aniversario número 81.",
+      "La medida, impulsada y aprobada por el Concejo Municipal, responde a una sentida demanda de décadas, reconociendo la trayectoria del club que ha sido un pilar deportivo y social en la comuna.",
+      "El alcalde Marcelo Miñañir agradeció el respaldo de los concejales y valoró la decisión: “Este es un reconocimiento a la historia y al compromiso de un club que ha sido parte fundamental de Graneros. Como municipio, y gracias al apoyo de nuestro Concejo, queremos garantizar que continúe su legado, aportando al deporte y a la comunidad”.",
+      "Con esta gestión, se concreta un anhelo histórico que permitirá a la institución proyectar nuevos desafíos y fortalecer su rol en el desarrollo deportivo local."
+    ],
+    "galeria": [
+      "src/images/Cancha/Comodato Cancha de Futbol.jpg"
+    ]
   },
   {
-    "id": 2,
-    "titulo": "Titulo Noticia Ejemplo 2",
-    "tipo": "Tipo Noticia",
-    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
+    "id": 1,
+    "titulo": "MUNICIPIO DE GRANEROS CONMEMORA EL DÍA DEL DIRIGENTE SOCIAL CON JORNADA DE CAPACITACIÓN Y RECONOCIMIENTO",
+    "tipo": "Informativa",
     "perfil": "src/images/png/logomun.png",
-    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+    "contenido": [
+      "En el marco del Día del Dirigente y Dirigenta Social, el alcalde Marcelo Miñañir Matus junto al Honorable Concejo Municipal encabezaron una jornada especial de conmemoración, que reunió a quienes lideran y fortalecen las comunidades de la comuna.",
+      "La actividad contempló durante la mañana instancias de capacitación dirigidas a potenciar la labor de los dirigentes, mientras que por la tarde se realizó una ceremonia de reconocimiento, destacando el compromiso y la entrega de hombres y mujeres que impulsan el desarrollo local.",
+      "Para el municipio y su alcalde, es primordial trabajar con todas las organizaciones sociales, tanto territoriales como funcionales, que día a día contribuyen a un mejor Graneros. “Nuestro compromiso es seguir fortaleciendo a los dirigentes y dirigentas sociales, porque su trabajo es clave en la construcción de un Graneros hacia el desarrollo”, destacó la autoridad comunal.",
+      "Con este acto, el municipio reafirma su respaldo a quienes cumplen un rol fundamental en la vida comunitaria y en el fortalecimiento de la participación ciudadana."
+    ],
+    "galeria": [
+      "src/images/Diri/Día del Dirigente - Alcalde Marcelo Miñañir.jpg",
+      "src/images/Diri/Día del Dirigente - Capacitación Teatro Municipal.jpg"
+    ]
   },
   {
     "id": 3,
-    "titulo": "Titulo Noticia Ejemplo 3",
+    "titulo": "GRANEROS VIVIÓ LA MAGIA DE PINOCHO EN SU PLAZA DE ARMAS",
     "tipo": "Tipo Noticia",
-    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
     "perfil": "src/images/png/logomun.png",
-    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+    "contenido": [
+      "Una tarde llena de sonrisas, cultura y entretención disfrutaron las familias granerinas con la presentación de la obra de teatro Pinocho, que convocó a numerosos niños, niñas y vecinos en la Plaza de Armas de la comuna.",
+      "La jornada combinó risas, juegos y actividades deportivas con momentos inolvidables de teatro y sorpresas preparadas especialmente para el disfrute de la comunidad. La iniciativa buscó fortalecer los lazos familiares y promover espacios de recreación y encuentro ciudadano.",
+      "El municipio destacó que estas actividades forman parte del compromiso con la infancia y la vida comunitaria. “Creemos que la infancia es alegría, imaginación y futuro, por eso seguimos trabajando para que nuestros pequeños tengan lugares donde puedan soñar y crecer felices”, señaló el alcalde Marcelo Miñañir.",
+      "Atentos, porque pronto se vienen más actividades pensadas para las familias granerinas, reafirmando el sello cultural y recreativo que caracteriza a la comuna."
+    ],
+    "galeria": [
+      "src/images/Niñez/Día de la Niñez - Niños junto a elenco de Pinocho.jpg",
+      "src/images/Niñez/Día de la Niñez en Plaza de Armas.jpg",
+      "src/images/Niñez/Alcalde - Día de la Niñez entregando juguetes.jpg"  
+    ]
   },
   {
     "id": 4,
-    "titulo": "Titulo Noticia Ejemplo 4",
+    "titulo": "MUNICIPIO DE GRANEROS IMPULSA CICLO DE CAPACITACIONES PARA JEFAS DE HOGAR JUNTO AL INSTITUTO SANTO TOMÁS",
     "tipo": "Tipo Noticia",
-    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
     "perfil": "src/images/png/logomun.png",
-    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+    "contenido": [
+      "En una jornada especial realizada en las dependencias del Instituto Santo Tomás, las vecinas que integran el Programa Jefas de Hogar recibieron la bienvenida oficial al nuevo ciclo de capacitaciones, instancia que busca entregar herramientas para fortalecer su desarrollo personal y laboral.",
+      "La iniciativa es posible gracias al trabajo conjunto entre la Municipalidad de Graneros, el Servicio Nacional de la Mujer y Equidad de Género (SERNAMEG) y el Instituto Santo Tomás, permitiendo que mujeres emprendedoras accedan a formación para potenciar sus negocios, adquirir nuevas habilidades y abrir mayores oportunidades para ellas y sus familias.",
+      "El alcalde Marcelo Miñañir destacó la impo rtancia del programa: “Para nosotros es fundamental apoyar a nuestras mujeres jefas de hogar, porque su esfuerzo y talento son clave en la construcción de un Graneros con más oportunidades y desarrollo”.",
+      "Con este ciclo de capacitaciones, el municipio reafirma su compromiso con las mujeres emprendedoras, entregándoles respaldo y acompañamiento en cada paso de su crecimiento."
+    ],
+    "galeria": [
+      "src/images/Santo Tomás/Alcalde y Mujeres de Graneros.jpg"
+    ]
   },
   {
     "id": 5,
-    "titulo": "Titulo Noticia Ejemplo 5",
+    "titulo": "MUNICIPIO DE GRANEROS IMPULSA CICLO DE CAPACITACIONES PARA JEFAS DE HOGAR JUNTO AL INSTITUTO SANTO TOMÁS",
     "tipo": "Tipo Noticia",
-    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
     "perfil": "src/images/png/logomun.png",
-    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
-  },
-  {
-    "id": 6,
-    "titulo": "Titulo Noticia Ejemplo 6",
-    "tipo": "Tipo Noticia",
-    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
-    "perfil": "src/images/png/logomun.png",
-    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
-  },
-  {
-    "id": 7,
-    "titulo": "Titulo Noticia Ejemplo 7",
-    "tipo": "Tipo Noticia",
-    "imagen": "src/images/jpg/Cogrid intercomunal 3.jpg",
-    "perfil": "src/images/png/logomun.png",
-    "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, rerum minima quisquam blanditiis modi corrupti dolor culpa obcaecati error!"
+    "contenido": [
+      "En una jornada especial realizada en las dependencias del Instituto Santo Tomás, las vecinas que integran el Programa Jefas de Hogar recibieron la bienvenida oficial al nuevo ciclo de capacitaciones, instancia que busca entregar herramientas para fortalecer su desarrollo personal y laboral.",
+      "La iniciativa es posible gracias al trabajo conjunto entre la Municipalidad de Graneros, el Servicio Nacional de la Mujer y Equidad de Género (SERNAMEG) y el Instituto Santo Tomás, permitiendo que mujeres emprendedoras accedan a formación para potenciar sus negocios, adquirir nuevas habilidades y abrir mayores oportunidades para ellas y sus familias.",
+      "El alcalde Marcelo Miñañir destacó la impo rtancia del programa: “Para nosotros es fundamental apoyar a nuestras mujeres jefas de hogar, porque su esfuerzo y talento son clave en la construcción de un Graneros con más oportunidades y desarrollo”.",
+      "Con este ciclo de capacitaciones, el municipio reafirma su compromiso con las mujeres emprendedoras, entregándoles respaldo y acompañamiento en cada paso de su crecimiento."
+    ],
+    "galeria": [
+      "src/images/Santo Tomás/Alcalde y Mujeres de Graneros.jpg"
+    ]
   }
 ]
