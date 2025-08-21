@@ -186,23 +186,47 @@
                 <div class="carousel-track">
                     <a href="https://www.sem2.gob.cl/tramites/permisos-de-circulacion-2c/69080300/buscar"
                         rel="external">
-                        <img src="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/3.png" alt="Permiso">
+                        <picture>
+                            <source media="(min-width: 1024px)"
+                                srcset="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/3.png">
+                            <source media="(max-width: 1023px)"
+                                srcset="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/2.png">
+                            <img src="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/3.png" alt="Permiso">
+                        </picture>
                     </a>
 
                     <a href="src/pdf/Bases_Concurso_Publico_Programa.pdf" target="_blank">
-                        <img src="src/images/jpg/banners/horario-de-atencion-dideco-04.png" alt="Horario">
+                        <picture>
+                            <source media="(min-width: 1024px)"
+                                srcset="src/images/jpg/banners/horario-de-atencion-dideco-04.png">
+                            <source media="(max-width: 1023px)"
+                                srcset="src/images/jpg/banners/horario-de-atencion-dideco-05.png">
+                            <img src="src/images/jpg/banners/horario-de-atencion-dideco-04.png" alt="Horario">
+                        </picture>
                     </a>
 
-                    <a href="https://docs.google.com/forms/..." target="_blank">
-                        <img src="src/images/jpg/banners/poda_banner.jpg" alt="Poda">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeKE66ZGICCiHazzNOkjJML5fQPODVNlJaGI0X84uXvtLo6w/viewform" target="_blank">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="src/images/jpg/banners/poda_banner.jpg">
+                            <source media="(max-width: 1023px)" srcset="src/images/jpg/banners/poda_banner_pequeno.jpg">
+                            <img src="src/images/jpg/banners/poda_banner.jpg" alt="Poda">
+                        </picture>
                     </a>
 
                     <a href="https://forms.gle/QSFzRkR6f2HSd8Fi8" target="_blank">
-                        <img src="src/images/jpg/banners/retiro-escombros.jpg" alt="Escombros">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="src/images/jpg/banners/retiro-escombros.jpg">
+                            <source media="(max-width: 1023px)" srcset="src/images/jpg/banners/retiro-escombros-pequeno.jpg">
+                            <img src="src/images/jpg/banners/retiro-escombros.jpg" alt="Escombros">
+                        </picture>
                     </a>
 
                     <a href="https://forms.gle/2rszLu6QsEL9MRfp8" target="_blank">
-                        <img src="src/images/jpg/banners/N-emergencia_banner.jpg" alt="Emergencia">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="src/images/jpg/banners/N-emergencia_banner.jpg">
+                            <source media="(max-width: 1023px)" srcset="src/images/jpg/banners/N-emergencia_banner-pequeno.jpg">
+                            <img src="src/images/jpg/banners/N-emergencia_banner.jpg" alt="Emergencia">
+                        </picture>
                     </a>
                 </div>
 
@@ -350,6 +374,7 @@
     <script src="/controllers/dots.js"></script>
     <script src="/controllers/noticias.js"></script>
     <script src="controllers/vista-activa.js"></script>
+    <script src="controllers/banner.js"></script>
     <!-- Tu script -->
     <script src="/controllers/script.js"></script>
 </body>
