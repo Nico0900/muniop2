@@ -204,7 +204,6 @@ header {
 
 /* Links internos */
 .dropdown-content li a {
-    display: block;
     padding: 10px 15px 10px 45px;
     color: #333;
     text-decoration: none;
