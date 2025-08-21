@@ -1,5 +1,5 @@
 // Array con los IDs de tus radios
-const slides = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
+const slides = ['slide1', 'slide2', 'slide3', 'slide4'];
 let current = 0; // slide inicial
 const intervalTime = 7000; // 5 segundos entre slides
 
