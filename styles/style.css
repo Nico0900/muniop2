@@ -76,71 +76,68 @@ header {
     border-radius: 15px;
 }
 
-/* Base */
+/* Carrusel CSS puro */
 .carousel {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
 }
 
-/* Ocultar radios */
-.carousel input {
-  display: none;
-}
-
-/* Track de slides */
 .carousel-track {
-  display: flex;
-  width: 500%; /* 5 slides */
-  transition: transform 0.6s ease;
+    display: flex;
+    width: 500%; /* 5 banners */
+    animation: slide 20s infinite; /* ajustar tiempo según cantidad */
 }
 
 .carousel-track a {
-  width: 20%;
-  flex-shrink: 0;
+    width: 20%; /* 100% / 5 banners */
+    display: block;
+    flex-shrink: 0;
 }
 
+/* Animación para 5 banners */
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    16% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(-20%);
+    }
+    36% {
+        transform: translateX(-20%);
+    }
+    40% {
+        transform: translateX(-40%);
+    }
+    56% {
+        transform: translateX(-40%);
+    }
+    60% {
+        transform: translateX(-60%);
+    }
+    76% {
+        transform: translateX(-60%);
+    }
+    80% {
+        transform: translateX(-80%);
+    }
+    96% {
+        transform: translateX(-80%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Imagenes responsivas */
 .carousel-track img {
-  width: 100%;
-  display: block;
-}
-
-/* Paginación */
-.carousel-nav {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.carousel-nav label {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  border-radius: 50%;
-  background: #bbb;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.carousel-nav label:hover {
-  background: #777;
-}
-
-/* Estado activo */
-#slide1:checked ~ .carousel-track { transform: translateX(0%); }
-#slide2:checked ~ .carousel-track { transform: translateX(-20%); }
-#slide3:checked ~ .carousel-track { transform: translateX(-40%); }
-#slide4:checked ~ .carousel-track { transform: translateX(-60%); }
-#slide5:checked ~ .carousel-track { transform: translateX(-80%); }
-
-/* Colorear el punto activo */
-#slide1:checked ~ .carousel-nav label[for="slide1"],
-#slide2:checked ~ .carousel-nav label[for="slide2"],
-#slide3:checked ~ .carousel-nav label[for="slide3"],
-#slide4:checked ~ .carousel-nav label[for="slide4"],
-#slide5:checked ~ .carousel-nav label[for="slide5"] {
-  background: #333;
+    width: 100%;
+    display: block;
 }
 
 
