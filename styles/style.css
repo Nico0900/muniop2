@@ -498,7 +498,7 @@ main.menu-toggle {
 .sidebar-socials {
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 10px 0 150px;
 }
 
 /* Ocultar completamente en pantallas grandes (PC) */
