@@ -108,7 +108,7 @@ fetch("../json/noticias.json")
             loop: true,
             autoplay: { delay: 7000, disableOnInteraction: false },
             pagination: { el: ".swiper-pagination", clickable: true },
-            breakpoints: { 0: { slidesPerView: 1 }, 860: { slidesPerView: 2 }, 1400: { slidesPerView: 3 }, 1920: { slidesPerView: 4 }, 2100: { slidesPerView: 6 } }
+            breakpoints: { 0: { slidesPerView: 1 }, 860: { slidesPerView: 2 }, 1400: { slidesPerView: 3 }, 1920: { slidesPerView: 4 }, 2100: { slidesPerView: 5 } }
         });
     });
 
