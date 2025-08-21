@@ -87,63 +87,52 @@ header {
 
 .carousel-track {
     display: flex;
-    width: 500%; /* 5 banners */
-    animation: slide 20s infinite; /* ajustar tiempo según cantidad */
+    width: 400%; /* 4 banners */
+    animation: slide 16s infinite; /* ajustar tiempo según cantidad */
 }
 
 .carousel-track a {
-    width: 20%; /* 100% / 5 banners */
+    width: 25%; /* 100% / 4 banners */
     display: block;
     flex-shrink: 0;
 }
 
-/* Animación para 5 banners */
+/* Animación para 4 banners */
 @keyframes slide {
     0% {
         transform: translateX(0%);
     }
-    16% {
+    20% {
         transform: translateX(0%);
     }
-    20% {
-        transform: translateX(-20%);
+    25% {
+        transform: translateX(-25%);
     }
-    36% {
-        transform: translateX(-20%);
+    45% {
+        transform: translateX(-25%);
     }
-    40% {
-        transform: translateX(-40%);
+    50% {
+        transform: translateX(-50%);
     }
-    56% {
-        transform: translateX(-40%);
+    70% {
+        transform: translateX(-50%);
     }
-    60% {
-        transform: translateX(-60%);
+    75% {
+        transform: translateX(-75%);
     }
-    76% {
-        transform: translateX(-60%);
-    }
-    80% {
-        transform: translateX(-80%);
-    }
-    96% {
-        transform: translateX(-80%);
+    95% {
+        transform: translateX(-75%);
     }
     100% {
         transform: translateX(0%);
     }
 }
 
-/* Imagenes responsivas */
+/* Imágenes responsivas */
 .carousel-track img {
     width: 100%;
     display: block;
 }
-
-
-
-
-
 
 /*Menu*/
 .menu-container {
