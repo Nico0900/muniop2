@@ -1,0 +1,33 @@
+#Mision {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#Mision .titulo {
+    text-align: center !important;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#Mision .intro p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: #333;
+}
+
+.mision-vision {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mision,
+.vision {
+    flex: 1 1 300px;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+}
