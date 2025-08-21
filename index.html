@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/card.css">
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/noticias-full.css">
+    <link rel="stylesheet" href="styles/services.css">
     <link rel="stylesheet" href="styles/links-interes.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <!-- Swiper CSS -->
@@ -218,7 +219,6 @@
                 </div>
             </section>
 
-
             <!-- Noticias -->
             <section>
                 <div class="container">
@@ -311,20 +311,62 @@
             </footer>
         </section>
 
-        <!-- pantalla de noticias -->
+        <!-- Sección de grid de noticias -->
         <section id="Noticias" class="pantalla">
             <div class="container">
                 <h2>Noticias</h2>
-                <div class="noticias-grid-full" id="noticias-container-full">
-                    <!-- Noticias generadas desde JS -->
+                <!-- Grid de noticias -->
+                <div id="noticias-container" class="noticias-grid-full"></div>
+            </div>
+        </section>
+
+        <!-- Sección de noticia individual -->
+        <section id="NoticiaID" class="pantalla">
+            <div class="container">
+                <h2>Detalle de Noticia</h2>
+                <!-- Contenedor donde se mostrará la noticia completa -->
+                <div id="noticia-detalle" class="noticias-grid-full"></div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- pantalla de servicios -->
+        <section id="Servicios" class="pantalla">
+            <div class="container">
+                <h2>Servicios</h2>
+                <div class="servicios-grid">
+                    <a href="https://www.sem2.gob.cl/tramites/permisos-de-circulacion-2c/69080300/buscar"
+                        class="servicio-card">
+                        <picture>
+                            <img src="https://www.sem2.gob.cl/banners/permisos-de-circulacion-2c/2.png" alt="Permiso">
+                        </picture>
+                    </a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeKE66ZGICCiHazzNOkjJML5fQPODVNlJaGI0X84uXvtLo6w/viewform"
+                        class="servicio-card">
+                        <picture>
+                            <img src="src/images/jpg/banners/poda_banner_pequeno.jpg" alt="Poda">
+                        </picture>
+                    </a>
+
+                    <a href="https://forms.gle/QSFzRkR6f2HSd8Fi8" class="servicio-card">
+                        <picture>
+                            <img src="src/images/jpg/banners/retiro-escombros-pequeno.jpg" alt="Escombros">
+                        </picture>
+                    </a>
+
+                    <a href="https://forms.gle/2rszLu6QsEL9MRfp8" class="servicio-card">
+                        <picture>
+                            <img src="src/images/jpg/banners/N-emergencia_banner-pequeno.jpg" alt="Emergencia">
+                        </picture>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- pantalla de servicios -->
-        <section id="Servicios" class="pantalla">
-            <h1>Servicios</h1>
-        </section>
 
         <!-- pantalla de tramites -->
         <section id="Tramites" class="pantalla">
@@ -355,7 +397,6 @@
     <script src="/controllers/noticias.js"></script>
     <script src="controllers/noticias-full.js"></script>
     <script src="controllers/vista-activa.js"></script>
-    <script src="controllers/banner.js"></script>
     <!-- Tu script -->
     <script src="/controllers/script.js"></script>
 </body>

@@ -1,25 +1,17 @@
-const noticiasContainerFull = document.getElementById("noticias-container-full");
-
-const modalFull = document.getElementById("modal-noticia-full");
-const modalTituloFull = document.getElementById("modal-titulo-full");
-const modalTipoFull = document.getElementById("modal-tipo-full");
-const modalContenidoFull = document.getElementById("modal-contenido-full");
-const modalPerfilFull = document.getElementById("modal-perfil-full");
-const modalGaleriaFull = document.getElementById("modal-galeria-full");
-const spanCloseFull = document.getElementById("close-modal-full");
-
-let modalSwiperFull;
+// Cargamos el grid de Noticias
+const noticiasContainer = document.getElementById("noticias-container-full");
+const detalleContainer = document.getElementById("noticia-detalle-full");
 
 fetch("../json/noticias.json")
     .then(res => res.json())
     .then(data => {
-        data.forEach(noticia => {
-            const cardFull = document.createElement("div");
-            cardFull.classList.add("card");
+        data.forEach((noticia, index) => {
+            const card = document.createElement("div");
+            card.classList.add("card");
 
             const preview = noticia.contenido[0].substring(0, 150) + "...";
 
-            cardFull.innerHTML = `
+            card.innerHTML = `
                 <div class="card-image">
                     <img src="${noticia.galeria[0]}" alt="${noticia.titulo}" />
                     <div class="tipo-noticia-full">${noticia.tipo}</div>
@@ -34,65 +26,65 @@ fetch("../json/noticias.json")
                     </div>
                 </div>
             `;
-            noticiasContainerFull.appendChild(cardFull);
 
-            cardFull.addEventListener("click", () => {
-                modalTituloFull.textContent = noticia.titulo;
-                modalTipoFull.textContent = noticia.tipo;
-                modalPerfilFull.src = noticia.perfil;
+            noticiasContainer.appendChild(card);
 
-                modalContenidoFull.innerHTML = "";
-                noticia.contenido.forEach(p => {
-                    const parrafo = document.createElement("p");
-                    parrafo.textContent = p;
-                    modalContenidoFull.appendChild(parrafo);
-                });
-
-                modalGaleriaFull.innerHTML = "";
-                if (noticia.galeria.length === 1) {
-                    const img = document.createElement("img");
-                    img.src = noticia.galeria[0];
-                    img.alt = "Imagen noticia";
-                    img.classList.add("modal-imagen-full");
-                    modalGaleriaFull.appendChild(img);
-                } else if (noticia.galeria.length > 1) {
-                    const imgPrincipal = document.createElement("img");
-                    imgPrincipal.src = noticia.galeria[0];
-                    imgPrincipal.alt = "Imagen noticia";
-                    imgPrincipal.classList.add("modal-imagen-full");
-                    modalGaleriaFull.appendChild(imgPrincipal);
-
-                    const galeriaExtrasFull = document.createElement("div");
-                    galeriaExtrasFull.classList.add("swiper", "modal-swiper-full");
-                    galeriaExtrasFull.innerHTML = `
-                        <div class="swiper-wrapper">
-                            ${noticia.galeria.slice(1).map(img => `
-                                <div class="swiper-slide">
-                                    <img src="${img}" alt="Imagen noticia" />
-                                </div>
-                            `).join('')}
-                        </div>
-                    `;
-                    modalGaleriaFull.appendChild(galeriaExtrasFull);
-
-                    if (modalSwiperFull) modalSwiperFull.destroy(true, true);
-                    modalSwiperFull = new Swiper(".modal-swiper-full", {
-                        slidesPerView: 1,
-                        loop: true,
-                        pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
-                        },
-                        breakpoints: { 0: { slidesPerView: 1 }, 860: { slidesPerView: 2 }, 1400: { slidesPerView: 3 }, 1920: { slidesPerView: 4 }, 2100: { slidesPerView: 6 } }
-                    });
-                }
-
-                modalFull.style.display = "block";
+            // Guardamos la noticia seleccionada en localStorage
+            card.addEventListener("click", () => {
+                localStorage.setItem("noticiaSeleccionada", JSON.stringify(noticia));
+                // Redirigimos a la sección de detalle
+                window.location.href = "#NoticiaID";
+                window.scrollTo({ top: 0, behavior: "smooth" });
             });
         });
     });
 
-spanCloseFull.onclick = () => modalFull.style.display = "none";
-window.addEventListener("click", e => {
-    if (e.target == modalFull) modalFull.style.display = "none";
+// Mostrar la noticia seleccionada en NoticiaID
+window.addEventListener("DOMContentLoaded", () => {
+    const noticia = JSON.parse(localStorage.getItem("noticiaSeleccionada"));
+    if (noticia && detalleContainer) {
+        detalleContainer.innerHTML = "";
+
+        const detalle = document.createElement("div");
+        detalle.classList.add("noticia-completa");
+
+        // Título
+        const titulo = document.createElement("h2");
+        titulo.textContent = noticia.titulo;
+        detalle.appendChild(titulo);
+
+        // Tipo
+        const tipo = document.createElement("div");
+        tipo.classList.add("tipo-noticia-full");
+        tipo.textContent = noticia.tipo;
+        detalle.appendChild(tipo);
+
+        // Perfil
+        const perfil = document.createElement("img");
+        perfil.src = noticia.perfil;
+        perfil.alt = "Perfil Noticia";
+        perfil.classList.add("perfil-noticia");
+        detalle.appendChild(perfil);
+
+        // Contenido completo
+        noticia.contenido.forEach(p => {
+            const parrafo = document.createElement("p");
+            parrafo.textContent = p;
+            detalle.appendChild(parrafo);
+        });
+
+        // Galería
+        noticia.galeria.forEach(imgSrc => {
+            const img = document.createElement("img");
+            img.src = imgSrc;
+            img.alt = "Imagen noticia";
+            img.classList.add("imagen-noticia");
+            detalle.appendChild(img);
+        });
+
+        detalleContainer.appendChild(detalle);
+
+        // Limpiamos localStorage para que no se repita al recargar
+        localStorage.removeItem("noticiaSeleccionada");
+    }
 });
