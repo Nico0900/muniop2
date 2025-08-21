@@ -87,12 +87,15 @@ header {
 
 .carousel-track {
     display: flex;
-    width: 400%; /* 4 banners */
-    animation: slide 16s infinite; /* ajustar tiempo según cantidad */
+    width: 400%;
+    /* 4 banners */
+    animation: slide 16s infinite;
+    /* ajustar tiempo según cantidad */
 }
 
 .carousel-track a {
-    width: 25%; /* 100% / 4 banners */
+    width: 25%;
+    /* 100% / 4 banners */
     display: block;
     flex-shrink: 0;
 }
@@ -102,27 +105,35 @@ header {
     0% {
         transform: translateX(0%);
     }
+
     20% {
         transform: translateX(0%);
     }
+
     25% {
         transform: translateX(-25%);
     }
+
     45% {
         transform: translateX(-25%);
     }
+
     50% {
         transform: translateX(-50%);
     }
+
     70% {
         transform: translateX(-50%);
     }
+
     75% {
         transform: translateX(-75%);
     }
+
     95% {
         transform: translateX(-75%);
     }
+
     100% {
         transform: translateX(0%);
     }
@@ -166,6 +177,73 @@ header {
     width: 40%;
     transform: rotate(35deg) translate(-30%, -160%);
 }
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Botón principal */
+.dropbtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Flechita */
+.arrow {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+/* Contenido oculto */
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Links internos */
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px 10px 45px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropbtn i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.dropdown-content li a i {
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+
+
+.dropdown-content li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Cuando está activo */
+.dropdown.active .dropdown-content {
+    display: flex;
+}
+
+/* Rotación flecha */
+.dropdown.active .arrow {
+    transform: rotate(90deg);
+}
+
+
+
 
 /*Brand*/
 .brand {

@@ -65,13 +65,34 @@
                         <img src="src/icons/Comuna.svg" alt="">
                         <span>Comuna</span>
                     </a>
-                </li>
-                <li>
-                    <a href="#">
+                </li> -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" onclick="toggleDropdown(event)">
                         <img src="src/icons/Municipio.svg" alt="">
                         <span>Municipio</span>
+                        <i class="fa-solid fa-chevron-right arrow"></i>
                     </a>
-                </li> -->
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="#" onclick="mostrarPantalla('Alcaldia')">
+                                <i class="fa-solid fa-user-tie me-2"></i> Alcaldía</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="mostrarPantalla('Concejo')">
+                                <i class="fa-solid fa-users"></i>Concejo Municipal</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="mostrarPantalla('Departamentos')">
+                                 <i class="fa-solid fa-sitemap"></i>Departamentos</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="mostrarPantalla('Mision')">
+                                <i class="fa-solid fa-bullseye"></i>Misión y Visión</a>
+                        </li>
+                    </ul>
+                </li>
+
+
                 <li>
                     <a href="#" onclick="mostrarPantalla('Noticias')">
                         <img src="src/icons/noticias.svg" alt="">
@@ -82,6 +103,12 @@
                     <a href="#" onclick="mostrarPantalla('Servicios')">
                         <img src="src/icons/chart.svg" alt="">
                         <span>Servicios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="mostrarPantalla('Cultura')">
+                        <img src="src/icons/chart.svg" alt="">
+                        <span>Cultura y Turismo</span>
                     </a>
                 </li>
                 <li>
@@ -163,8 +190,6 @@
                         <img src="src/icons/whatsapp-black.svg" alt="whatsapp">
                     </a>
                 </li>
-
-
             </ul>
         </nav>
     </div>
@@ -313,6 +338,27 @@
             </footer>
         </section>
 
+        <!-- pantalla de tramites -->
+        <section id="Alcaldia" class="pantalla">
+            <h1>Alcaldia</h1>
+        </section>
+
+        <!-- pantalla de tramites -->
+        <section id="Concejo" class="pantalla">
+            <h1>Consejo Municipal</h1>
+        </section>
+
+        <!-- pantalla de tramites -->
+        <section id="Departamentos" class="pantalla">
+            <h1>Departamentos</h1>
+        </section>
+
+        <!-- pantalla de tramites -->
+        <section id="Mision" class="pantalla">
+            <h1>Mision, vision y organigrama</h1>
+        </section>
+
+
         <!-- Sección de grid de noticias -->
         <section id="Noticias" class="pantalla">
             <div class="container">
@@ -369,6 +415,8 @@
             <h1>Trámites</h1>
         </section>
 
+
+
     </main>
 
     <!-- Modal Noticia -->
@@ -392,6 +440,7 @@
     <script src="/controllers/dots.js"></script>
     <script src="/controllers/noticias.js"></script>
     <script src="controllers/noticias-full.js"></script>
+    <script src="controllers/dorpdown.js"></script>
     <script src="controllers/vista-activa.js"></script>
     <!-- Tu script -->
     <script src="/controllers/script.js"></script>
