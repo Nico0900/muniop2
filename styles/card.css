@@ -1,30 +1,38 @@
-/* Importing Google fonts - Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+/* Importing Google fonts - Monserat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.container{
+/*  Card
+    --color-title: #0D5963;
+    --color-background-type: #CA3148;
+    --color-text: #3d3d3d;
+    --color-box-shadow: #b0b0b0;
+    --color-background: #e5f3f9;
+    --color-background-cursor: #c6e7f1;
+    --color-broder-card: #ffffff; 
+*/
+.container {
+    background-color: var(--color-broder-card);
     padding: 20px;
-
 }
 
 .wrapper {
-    padding: 20px 10px;
-    margin: 0 60px 35px;
     overflow: hidden;
 }
 
 .wrapper .card {
     width: 200px;
-    background: #fff;
+    background: var(--color-background);
     display: flex;
     height: auto;
     flex-direction: column;
     border-radius: 20px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
 
 .wrapper .card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px var(--color-broder-card);
+    background-color: var(--color-background-cursor);
 }
 
 .card .card-image {
@@ -41,17 +49,17 @@
 
 .card .card-image .card-tag {
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 20px;
+    left: 20px;
     font-size: 0.75rem;
-    color: #6366f1;
+    color: white;
     padding: 5px 15px;
     border-radius: 30px;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: var(--color-background-type);
+    box-shadow: 0 2px 10px var(--color-box-shadow);
 }
 
 .card .card-content {
@@ -62,7 +70,7 @@
 }
 
 .card .card-content .card-title {
-    color: #111111;
+    color: var(--color-title);
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.3;
@@ -70,7 +78,7 @@
 }
 
 .card .card-content .card-text {
-    color: #747474;
+    color: var(--color-text);
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -112,6 +120,7 @@
     margin-right: 10px;
     object-fit: cover;
     border-radius: 50%;
+    background-color: white;
     border: 2px solid #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -165,23 +174,35 @@
 }
 
 /* Swiper styles */
+
+.swiper {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+    overflow: hidden !important;
+    list-style: none !important;
+    z-index: 1 !important;
+    display: block !important;
+    padding: 5px 5px 42px 5px !important
+}
+
 .swiper-pagination {
-  text-align: center;
-  margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  background: #ccc;
-  opacity: 1;
-  border-radius: 50%;
-  margin: 0 5px;
-  transition: background 0.3s;
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    opacity: 1;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background 0.3s;
 }
 
 .swiper-pagination-bullet-active {
-  background: #007bff;
+    background: #007bff;
 }
 
 /* Opcional: ocultar solo en móvil */

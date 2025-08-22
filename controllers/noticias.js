@@ -103,7 +103,6 @@ fetch("../json/noticias.json")
 
         // Swiper principal de tarjetas
         new Swiper(".swiper", {
-            slidesPerView: 3,
             spaceBetween: 20,
             loop: true,
             autoplay: { delay: 7000, disableOnInteraction: false },

@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="src/images/png/logomun.png">
     <title>Municipalidad de Graneros</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/text-styles.css">
-    <link rel="stylesheet" href="styles/card.css">
-    <link rel="stylesheet" href="styles/modal.css">
-    <link rel="stylesheet" href="styles/noticias-full.css">
-    <link rel="stylesheet" href="styles/services.css">
-    <link rel="stylesheet" href="styles/mision.css">
-    <link rel="stylesheet" href="styles/contruccion.css">
-    <link rel="stylesheet" href="styles/links-interes.css">
-    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="styles/style.css"> <!-- estilo generales -->
+    <link rel="stylesheet" href="styles/text-styles.css"> <!-- letras y titulos -->
+    <link rel="stylesheet" href="styles/card.css"> <!-- card de noticias -->
+    <link rel="stylesheet" href="styles/modal.css"> <!-- modal de noticias -->
+    <link rel="stylesheet" href="styles/noticias-full.css"> <!-- diseño grid de noticias  -->
+    <link rel="stylesheet" href="styles/services.css"> <!-- diseños de pantalla de servicios -->
+    <link rel="stylesheet" href="styles/mision.css"> <!-- diseño patalla mision -->
+    <link rel="stylesheet" href="styles/contruccion.css"> <!-- pantalla construccion -->
+    <link rel="stylesheet" href="styles/links-interes.css"> <!-- diseño de link de interes -->
+    <link rel="stylesheet" href="/styles/footer.css"> <!-- diseño del footer de la pagina -->
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- cdn de los diseños de swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- cnd para iconos de fonts awesome -->
 </head>
 
 <body>
@@ -33,7 +35,7 @@
             </div>
             <div class="brand">
                 <a href="index.html">
-                    <img src="src/images/png/Logos municipalidad de Graneros-10.png" alt="icon-udemy" class="logo">
+                    <img src="src/images/png/Logos municipalidad de Graneros.png" alt="icon-udemy" class="logo">
                 </a>
             </div>
         </div>
@@ -58,44 +60,44 @@
             <ul>
                 <li>
                     <a href="#" class="selected" onclick="mostrarPantalla('Inicio', this)">
-                        <img src="src/icons/home.svg" alt="">
+                        <img src="src/icons/home.svg" alt="" class="icon">
                         <span>Inicio</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" onclick="mostrarPantalla('Comuna', this)">
-                        <img src="src/icons/Comuna.svg" alt="">
+                        <img src="src/icons/Comuna.svg" alt="" class="icon">
                         <span>Comuna</span>
                     </a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn" onclick="toggleDropdown(event)">
-                        <img src="src/icons/iconos nuevos-06.svg" alt="">
+                        <img src="src/icons/iconos nuevos-06.svg" alt="" class="icon">
                         <span>Municipio</span>
                         <i class="fa-solid fa-chevron-right arrow"></i>
                     </a>
                     <ul class="dropdown-content">
                         <li>
                             <a href="#" onclick="mostrarPantalla('Alcaldia', this)">
-                                <img src="src/icons/person.svg" alt="">
+                                <img src="src/icons/person.svg" alt="" class="icon">
                                 <span>Alcaldía</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" onclick="mostrarPantalla('Concejo', this)">
-                                <img src="src/icons/concejo.svg" alt="">
+                                <img src="src/icons/concejo.svg" alt="" class="icon">
                                 <span>Concejo Municipal</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" onclick="mostrarPantalla('Departamentos', this)">
-                                <img src="src/icons/organization.svg" alt="">
+                                <img src="src/icons/organization.svg" alt="" class="icon">
                                 <span>Departamentos</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" onclick="mostrarPantalla('Mision', this)">
-                                <img src="src/icons/bullseye.svg" alt="">
+                                <img src="src/icons/bullseye.svg" alt="" class="icon">
                                 <span>Misión y Visión</span>
                             </a>
                         </li>
@@ -103,51 +105,51 @@
                 </li>
                 <li>
                     <a href="#" onclick="mostrarPantalla('Noticias', this)">
-                        <img src="src/icons/iconos nuevos-07.svg" alt="">
+                        <img src="src/icons/iconos nuevos-07.svg" alt="" class="icon">
                         <span>Noticias</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" onclick="mostrarPantalla('Servicios', this)">
-                        <img src="src/icons/iconos nuevos-05.svg" alt="">
+                        <img src="src/icons/iconos nuevos-05.svg" alt="" class="icon">
                         <span>Servicios</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" onclick="mostrarPantalla('Cultura', this)">
-                        <img src="src/icons/iconos nuevos-08.svg" alt="" style="width: 30px;">  
+                        <img src="src/icons/iconos nuevos-08.svg" alt="" style="width: 30px;" class="icon">
                         <span>Cultura y Turismo</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" onclick="mostrarPantalla('Tramites', this)">
-                        <img src="src/icons/menu-tramites.svg" alt="">
+                        <img src="src/icons/menu-tramites.svg" alt="" class="icon">
                         <span>trámites y pagos en linea</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.portaltransparencia.cl/PortalPdT/web/guest/directorio-de-organismos-regulados?p_p_id=pdtorganismos_WAR_pdtorganismosportlet&orgcode=f43f1d17f72036384669ba45ec911086"
                         target="_blank">
-                        <img src="src/icons/info.svg" alt="">
+                        <img src="src/icons/info.svg" alt="" class="icon">
                         <span>Solicitar Información</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.portaltransparencia.cl/PortalPdT/directorio-de-organismos-regulados/?org=MU100"
                         target="_blank">
-                        <img src="src/icons/books.svg" alt="">
+                        <img src="src/icons/books.svg" alt="" class="icon">
                         <span>Transparencia Activa</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.leylobby.gob.cl/instituciones/MU100" target="_blank">
-                        <img src="src/icons/iconos nuevos-04.svg" alt="">
+                        <img src="src/icons/iconos nuevos-04.svg" alt="" class="icon">
                         <span>Ley del Lobby</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.bcn.cl/leychile/navegar?idNorma=1129283" target="_blank">
-                        <img src="src/icons/iconos nuevos-04.svg" alt="">
+                        <img src="src/icons/iconos nuevos-04.svg" alt="" class="icon">
                         <span>Ley 21146</span>
                     </a>
                 </li>
@@ -171,13 +173,13 @@
                 <br>
                 <!-- <li>
                     <a href="#">
-                        <img src="src/icons/Intranet.svg" alt="">
+                        <img src="src/icons/Intranet.svg" alt="" class="icon">
                         <span>Intranet</span>
                     </a>
                 </li> -->
                 <li>
                     <a href="https://outlook.office.com/mail/" target="_blank">
-                        <img src="src/icons/mail.svg" alt="">
+                        <img src="src/icons/mail.svg" alt="" class="icon">
                         <span>Mail Institucional</span>
                     </a>
                 </li>
@@ -186,16 +188,16 @@
                 <!-- Redes Sociales (solo visible en pantallas pequeñas) -->
                 <li class="sidebar-socials">
                     <a href="https://www.youtube.com/@MuniGranerosOficial" target="_blank">
-                        <img src="src/icons/youtube-black.svg" alt="youtube">
+                        <img src="src/icons/youtube-black.svg" alt="youtube" class="icon">
                     </a>
                     <a href="https://www.instagram.com/munigraneros/?utm_source=qr" target="_blank">
-                        <img src="src/icons/instagram-black.svg" alt="instagram">
+                        <img src="src/icons/instagram-black.svg" alt="instagram" class="icon">
                     </a>
                     <a href="https://www.facebook.com/munigraneros" target="_blank">
-                        <img src="src/icons/facebook-black.svg" alt="facebook">
+                        <img src="src/icons/facebook-black.svg" alt="facebook" class="icon">
                     </a>
                     <a href="https://whatsapp.com/channel/0029VazSREqHwXb4LrelIc2I" target="_blank">
-                        <img src="src/icons/whatsapp-black.svg" alt="whatsapp">
+                        <img src="src/icons/whatsapp-black.svg" alt="whatsapp" class="icon">
                     </a>
                 </li>
             </ul>
@@ -267,9 +269,46 @@
                 </div>
             </section>
 
-            <!-- link de interes  -->
-            <section>
-                <section class="links-grid">
+            <!-- Contenedor principal -->
+            <section class="links-wrapper">
+                <!-- Servicios -->
+                <div class="links-grid">
+                    <h2>Servicios y Trámites</h2>
+                    <div class="grid-container">
+                        <a href="https://www.chileatiende.gob.cl/" target="_blank" class="grid-item">
+                            <img src="src/images/png/interes/chileatiende.svg" alt="chileatiende">
+                            <span>Chile Atiende</span>
+                        </a>
+
+                        <a href="https://www.bne.cl/" target="_blank" class="grid-item">
+                            <img src="src/images/png/interes/bne.png" alt="bne">
+                            <span>Bolsa Nacional del Empleo</span>
+                        </a>
+
+                        <a href="https://www.registrocivil.cl/" target="_blank" class="grid-item">
+                            <img src="src/images/png/interes/registrocivil.png" alt="registrocivil">
+                            <span>Registro Civil</span>
+                        </a>
+
+                        <a href="https://sence.gob.cl/" target="_blank" class="grid-item">
+                            <img src="src/images/png/interes/sence.png" alt="sence">
+                            <span>Sence</span>
+                        </a>
+
+                        <a href="https://www.empleospublicos.cl/" target="_blank" class="grid-item">
+                            <img src="src/images/png/interes/empleospublicos.png" alt="empleospublicos">
+                            <span>Empleos Públicos</span>
+                        </a>
+
+                        <a href="https://www.ventanillaunicasocial.gob.cl/" target="_blank" class="grid-item">
+                            <img src="src/images/png/interes/ventanillaunica.svg" alt="ventanillaunica">
+                            <span>Ventanilla Única</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links de Interés -->
+                <div class="links-grid">
                     <h2>Links de Interés</h2>
                     <div class="grid-container">
                         <a href="https://www.chileatiende.gob.cl/" target="_blank" class="grid-item">
@@ -283,28 +322,28 @@
                         </a>
 
                         <a href="https://www.registrocivil.cl/" target="_blank" class="grid-item">
-                            <img src="src/images/png/interes/registrocivil.png" alt="chileatiende">
+                            <img src="src/images/png/interes/registrocivil.png" alt="registrocivil">
                             <span>Registro Civil</span>
                         </a>
 
                         <a href="https://sence.gob.cl/" target="_blank" class="grid-item">
-                            <img src="src/images/png/interes/sence.png" alt="bne">
+                            <img src="src/images/png/interes/sence.png" alt="sence">
                             <span>Sence</span>
                         </a>
 
                         <a href="https://www.empleospublicos.cl/" target="_blank" class="grid-item">
-                            <img src="src/images/png/interes/empleospublicos.png" alt="chileatiende">
-                            <span>Empleos Publicos</span>
+                            <img src="src/images/png/interes/empleospublicos.png" alt="empleospublicos">
+                            <span>Empleos Públicos</span>
                         </a>
 
                         <a href="https://www.ventanillaunicasocial.gob.cl/" target="_blank" class="grid-item">
-                            <img src="src/images/png/interes/ventanillaunica.svg" alt="bne">
-                            <span>Ventanilla Unica</span>
+                            <img src="src/images/png/interes/ventanillaunica.svg" alt="ventanillaunica">
+                            <span>Ventanilla Única</span>
                         </a>
                     </div>
-                </section>
-
+                </div>
             </section>
+
 
             <!-- Footer -->
             <footer class="footer">
@@ -523,8 +562,6 @@
                 <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="Construcción">
             </div>
         </section>
-
-
     </main>
 
     <!-- Modal Noticia -->
@@ -545,13 +582,13 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/controllers/dots.js"></script>
-    <script src="/controllers/noticias.js"></script>
-    <script src="controllers/noticias-full.js"></script>
-    <script src="controllers/dorpdown.js"></script>
-    <script src="controllers/vista-activa.js"></script>
+    <!-- scripts de swiper para las cards -->
+    <script src="/controllers/noticias.js"></script> <!-- controlador del llamado y muestra de noticias -->
+    <script src="controllers/noticias-full.js"></script> <!-- controlador del llamado y muestra de noticias -->
+    <script src="controllers/dorpdown.js"></script> <!-- controlador del dropdown del sidebar del menu principal -->
+    <script src="controllers/vista-activa.js"></script> <!-- controlador de visual activa -->
     <!-- Tu script -->
-    <script src="/controllers/script.js"></script>
+    <script src="/controllers/script.js"></script> <!-- controlador del menu (hambuerguesa) -->
 </body>
 
 </html>
