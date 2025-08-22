@@ -1,7 +1,8 @@
 /* Contenedor principal de ambas secciones */
 .links-wrapper {
   display: grid;
-  grid-template-columns: 3fr 2fr; /* izquierda 60% | derecha 40% */
+  grid-template-columns: 3fr 2fr;
+  /* izquierda 60% | derecha 40% */
   gap: 2rem;
   padding: 20px;
   align-items: start;
@@ -11,7 +12,8 @@
 /* Ajuste responsive */
 @media (max-width: 1024px) {
   .links-wrapper {
-    grid-template-columns: 1fr; /* apiladas en pantallas medianas y móviles */
+    grid-template-columns: 1fr;
+    /* apiladas en pantallas medianas y móviles */
   }
 }
 
@@ -79,19 +81,77 @@
 /* ---- Diferencia de tamaños entre columnas ---- */
 
 /* Columna izquierda (Servicios) → más grandes */
-.links-wrapper > .links-grid:first-child .grid-item img {
-  max-width: 120px;
+.links-wrapper>.links-grid:first-child .grid-item img {
+  max-width: 230px;
 }
 
-.links-wrapper > .links-grid:first-child .grid-item span {
+.links-wrapper>.links-grid:first-child .grid-item span {
   font-size: 1.05rem;
 }
 
 /* Columna derecha (Links de interés) → más pequeños */
-.links-wrapper > .links-grid:last-child .grid-item img {
+.links-wrapper>.links-grid:last-child .grid-item img {
   max-width: 80px;
 }
 
-.links-wrapper > .links-grid:last-child .grid-item span {
+.links-wrapper>.links-grid:last-child .grid-item span {
   font-size: 0.9rem;
+}
+
+/* ---- Ajuste imágenes columna izquierda para ocupar todo el botón ---- */
+.links-wrapper>.links-grid:first-child .grid-item {
+  padding: 0;
+  /* elimina padding interno del botón */
+  background: none;
+  /* sin color de fondo */
+  border: none;
+  /* sin borde */
+  box-shadow: none;
+  /* sin sombra */
+}
+
+.links-wrapper>.links-grid:first-child .grid-item img {
+  width: 100%;
+  /* ocupa todo el ancho del contenedor */
+  height: 100%;
+  /* ocupa todo el alto del contenedor */
+  object-fit: cover;
+  /* rellena el contenedor recortando si es necesario */
+  border-radius: 16px;
+  /* mantiene bordes redondeados */
+  margin-bottom: 0;
+  /* elimina espacio debajo de la imagen */
+}
+
+.links-wrapper>.links-grid:first-child .grid-item span {
+  display: none;
+  /* oculta el texto dentro del botón */
+}
+
+/* ---- Ajuste columna izquierda: iconos grandes y responsive ---- */
+.links-wrapper>.links-grid:first-child .grid-container {
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 por fila en PC y tablet */
+  gap: 16px;
+}
+
+/* Responsive: Tablet y móvil */
+@media (max-width: 1600px) {
+  .links-wrapper>.links-grid:first-child .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 por fila en móvil */
+  }
+}
+
+/* ---- Ajuste columna derecha: máximo 3 por fila en PC ---- */
+.links-wrapper > .links-grid:last-child .grid-container {
+  grid-template-columns: repeat(3, 1fr); /* máximo 3 por fila */
+  gap: 16px;
+}
+
+/* Responsive: Tablet y móvil (se adaptan mejor a 2 por fila) */
+@media (max-width: 768px) {
+  .links-wrapper > .links-grid:last-child .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 por fila en móvil */
+  }
 }

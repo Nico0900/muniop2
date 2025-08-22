@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/text-styles.css"> <!-- letras y titulos -->
     <link rel="stylesheet" href="styles/card.css"> <!-- card de noticias -->
     <link rel="stylesheet" href="styles/modal.css"> <!-- modal de noticias -->
-    <link rel="stylesheet" href="styles/noticias-full.css"> <!-- diseño grid de noticias  -->
+    <!-- <link rel="stylesheet" href="styles/noticias-full.css"> diseño grid de noticias  -->
     <link rel="stylesheet" href="styles/services.css"> <!-- diseños de pantalla de servicios -->
     <link rel="stylesheet" href="styles/mision.css"> <!-- diseño patalla mision -->
     <link rel="stylesheet" href="styles/contruccion.css"> <!-- pantalla construccion -->
@@ -103,12 +103,12 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#" onclick="mostrarPantalla('Noticias', this)">
                         <img src="src/icons/iconos nuevos-07.svg" alt="" class="icon">
                         <span>Noticias</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="#" onclick="mostrarPantalla('Servicios', this)">
                         <img src="src/icons/iconos nuevos-05.svg" alt="" class="icon">
@@ -275,34 +275,22 @@
                 <div class="links-grid">
                     <h2>Servicios y Trámites</h2>
                     <div class="grid-container">
-                        <a href="https://www.chileatiende.gob.cl/" target="_blank" class="grid-item">
-                            <img src="src/images/png/interes/chileatiende.svg" alt="chileatiende">
-                            <span>Chile Atiende</span>
+                        <a href="https://www.sem2.gob.cl/tramites/permisos-de-circulacion-2c/69080300/buscar"
+                            target="_blank" class="grid-item">
+                            <img src="src/images/jpg/botones/permisos de circulacion_1x1.png" alt="p-circulacion">
                         </a>
 
-                        <a href="https://www.bne.cl/" target="_blank" class="grid-item">
-                            <img src="src/images/png/interes/bne.png" alt="bne">
-                            <span>Bolsa Nacional del Empleo</span>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeKE66ZGICCiHazzNOkjJML5fQPODVNlJaGI0X84uXvtLo6w/viewform"
+                            target="_blank" class="grid-item">
+                            <img src="src/images/jpg/botones/poda.png" alt="poda">
                         </a>
 
-                        <a href="https://www.registrocivil.cl/" target="_blank" class="grid-item">
-                            <img src="src/images/png/interes/registrocivil.png" alt="registrocivil">
-                            <span>Registro Civil</span>
+                        <a href="https://forms.gle/QSFzRkR6f2HSd8Fi8" target="_blank" class="grid-item">
+                            <img src="src/images/jpg/botones/extraccion-escombros.png" alt="extraccion-escombros">
                         </a>
 
-                        <a href="https://sence.gob.cl/" target="_blank" class="grid-item">
-                            <img src="src/images/png/interes/sence.png" alt="sence">
-                            <span>Sence</span>
-                        </a>
-
-                        <a href="https://www.empleospublicos.cl/" target="_blank" class="grid-item">
-                            <img src="src/images/png/interes/empleospublicos.png" alt="empleospublicos">
-                            <span>Empleos Públicos</span>
-                        </a>
-
-                        <a href="https://www.ventanillaunicasocial.gob.cl/" target="_blank" class="grid-item">
-                            <img src="src/images/png/interes/ventanillaunica.svg" alt="ventanillaunica">
-                            <span>Ventanilla Única</span>
+                        <a href="tel:+56957581718" target="_blank" class="grid-item">
+                            <img src="src/images/jpg/botones/n-emergencia.png" alt="n-emergencia">
                         </a>
                     </div>
                 </div>
@@ -344,7 +332,6 @@
                 </div>
             </section>
 
-
             <!-- Footer -->
             <footer class="footer">
                 <div class="footer-container">
@@ -385,6 +372,7 @@
             </footer>
         </section>
 
+        <!-- pantalla de tramites -->
         <section id="Comuna" class="pantalla">
             <div class="construccion">
                 <h1>🚧 Sitio en Construcción</h1>
@@ -491,7 +479,7 @@
             </div>
         </section>
 
-        <!--  Sección de grid de noticias -->
+         <!-- Sección de grid de noticias
         <section id="Noticias" class="pantalla">
             <div class="container">
                 <h2>Noticias</h2>
@@ -499,13 +487,13 @@
             </div>
         </section>
 
-        <!-- Sección de noticia individual -->
+        Sección de noticia individual
         <section id="NoticiaID" class="pantalla">
             <div class="container">
                 <h2>Detalle de Noticia</h2>
                 <div id="noticia-detalle-full" class="noticias-grid-full"></div>
             </div>
-        </section>
+        </section> -->
 
         <!-- pantalla de servicios -->
         <section id="Servicios" class="pantalla">
@@ -584,7 +572,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- scripts de swiper para las cards -->
     <script src="/controllers/noticias.js"></script> <!-- controlador del llamado y muestra de noticias -->
-    <script src="controllers/noticias-full.js"></script> <!-- controlador del llamado y muestra de noticias -->
+    <!-- <script src="controllers/noticias-full.js"></script> controlador del llamado y muestra de noticias -->
     <script src="controllers/dorpdown.js"></script> <!-- controlador del dropdown del sidebar del menu principal -->
     <script src="controllers/vista-activa.js"></script> <!-- controlador de visual activa -->
     <!-- Tu script -->

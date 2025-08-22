@@ -8,11 +8,11 @@
     --color-box-shadow: #b0b0b0;
     --color-background: #e5f3f9;
     --color-background-cursor: #c6e7f1;
-    --color-broder-card: #ffffff; 
+    --color-border-card: #ffffff; 
 */
 .container {
-    background-color: var(--color-broder-card);
-    padding: 20px;
+    background-color: var(--color-border-card);
+    padding: 20px 20px 0px 20px;
 }
 
 .wrapper {
@@ -31,7 +31,7 @@
 
 .wrapper .card:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 15px var(--color-broder-card);
+    box-shadow: 0 6px 15px var(--color-border-card);
     background-color: var(--color-background-cursor);
 }
 
