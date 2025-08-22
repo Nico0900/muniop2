@@ -57,13 +57,13 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#" class="selected" onclick="mostrarPantalla('Inicio')">
+                    <a href="#" class="selected" onclick="mostrarPantalla('Inicio', this)">
                         <img src="src/icons/home.svg" alt="">
                         <span>Inicio</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="mostrarPantalla('Comuna')">
+                    <a href="#" onclick="mostrarPantalla('Comuna', this)">
                         <img src="src/icons/Comuna.svg" alt="">
                         <span>Comuna</span>
                     </a>
@@ -76,52 +76,51 @@
                     </a>
                     <ul class="dropdown-content">
                         <li>
-                            <a href="#" onclick="mostrarPantalla('Alcaldia')">
+                            <a href="#" onclick="mostrarPantalla('Alcaldia', this)">
                                 <img src="src/icons/person.svg" alt="">
                                 <span>Alcaldía</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" onclick="mostrarPantalla('Concejo')">
+                            <a href="#" onclick="mostrarPantalla('Concejo', this)">
                                 <img src="src/icons/concejo.svg" alt="">
                                 <span>Concejo Municipal</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" onclick="mostrarPantalla('Departamentos')">
+                            <a href="#" onclick="mostrarPantalla('Departamentos', this)">
                                 <img src="src/icons/organization.svg" alt="">
                                 <span>Departamentos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" onclick="mostrarPantalla('Mision')">
+                            <a href="#" onclick="mostrarPantalla('Mision', this)">
                                 <img src="src/icons/bullseye.svg" alt="">
                                 <span>Misión y Visión</span>
                             </a>
                         </li>
                     </ul>
                 </li>
-
-                <!-- <li>
-                    <a href="#" onclick="mostrarPantalla('Noticias')">
+                <li>
+                    <a href="#" onclick="mostrarPantalla('Noticias', this)">
                         <img src="src/icons/iconos nuevos-07.svg" alt="">
                         <span>Noticias</span>
                     </a>
-                </li> -->
+                </li>
                 <li>
-                    <a href="#" onclick="mostrarPantalla('Servicios')">
+                    <a href="#" onclick="mostrarPantalla('Servicios', this)">
                         <img src="src/icons/iconos nuevos-05.svg" alt="">
                         <span>Servicios</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="mostrarPantalla('Cultura')">
+                    <a href="#" onclick="mostrarPantalla('Cultura', this)">
                         <img src="src/icons/iconos nuevos-08.svg" alt="" style="width: 30px;">  
                         <span>Cultura y Turismo</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="mostrarPantalla('Tramites')">
+                    <a href="#" onclick="mostrarPantalla('Tramites', this)">
                         <img src="src/icons/menu-tramites.svg" alt="">
                         <span>trámites y pagos en linea</span>
                     </a>
@@ -453,7 +452,7 @@
             </div>
         </section>
 
-        <!-- Sección de grid de noticias
+        <!--  Sección de grid de noticias -->
         <section id="Noticias" class="pantalla">
             <div class="container">
                 <h2>Noticias</h2>
@@ -461,13 +460,13 @@
             </div>
         </section>
 
-        Sección de noticia individual
+        <!-- Sección de noticia individual -->
         <section id="NoticiaID" class="pantalla">
             <div class="container">
                 <h2>Detalle de Noticia</h2>
                 <div id="noticia-detalle-full" class="noticias-grid-full"></div>
             </div>
-        </section> -->
+        </section>
 
         <!-- pantalla de servicios -->
         <section id="Servicios" class="pantalla">
