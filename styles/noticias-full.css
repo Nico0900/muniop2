@@ -26,7 +26,8 @@
 
 .card:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 15px var(--color-border-card);
+    background-color: var(--color-background-cursor);
 }
 
 .tipo-noticia-full {
