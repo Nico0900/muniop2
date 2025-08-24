@@ -489,15 +489,17 @@ main.menu-toggle {
     animation: fadeInUp 0.5s ease forwards;
 }
 
-
-/*Responsive*/
-@media (max-width:500px) {
-    .brand .logo {
-        width: 12rem;
-    }
-
+@media (max-width: 756px) {
     .right .icons-header {
         display: none;
+    }
+}
+
+
+/*Responsive*/
+@media (max-width:1200px) {
+    .brand .logo {
+        width: 12rem;
     }
 
     .sidebar {
@@ -535,7 +537,7 @@ main.menu-toggle {
 }
 
 /* Ocultar completamente en pantallas grandes (PC) */
-@media (min-width: 1024px) {
+@media (min-width: 756px) {
     .sidebar-socials {
         display: none;
     }
