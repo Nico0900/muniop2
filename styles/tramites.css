@@ -1,0 +1,47 @@
+/* Fondo general de la sección */
+#Tramites {
+    background-color: #e5f3f9; /* background */
+}
+
+/* Títulos */
+#Tramites h2 {
+    color: #3d3d3d; /* título */
+}
+
+/* Botones y enlaces */
+#Tramites a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; /* 16px */
+    background-color: #ffffff; /* botones blancos */
+    border: 2px solid #c6e7f1; /* borde */
+    border-radius: 1rem; /* 16px */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-decoration: none; /* quitar subrayado de enlaces */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover de botones y enlaces */
+#Tramites a:hover {
+    background-color: #c6e7f1; /* hover */
+    transform: translateY(-2px); /* efecto sutil */
+}
+
+/* Iconos dentro de botones y enlaces usando filtro */
+#Tramites a svg {
+    width: 2rem; /* 32px */
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    filter: invert(22%) sepia(78%) saturate(2986%) hue-rotate(166deg) brightness(92%) contrast(90%);
+    /* Este filtro aproxima el color #0D5963 */
+}
+
+/* Texto de botones y enlaces */
+#Tramites a span {
+    color: #3d3d3d; /* título del botón */
+    text-align: center;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.2rem;
+}
