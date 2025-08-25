@@ -1,33 +1,73 @@
+/* Estilo general del contenedor */
 #Mision {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Título principal */
 #Mision .titulo {
-    text-align: center !important;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#Mision .intro p {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
+    font-weight: 800;
     margin-bottom: 30px;
-    font-weight: 500;
-    color: #333;
+    color: #00796b;
+    line-height: 1.2;
 }
 
+/* Introducción */
+#Mision .intro p {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedor Misión y Visión */
 .mision-vision {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
 }
 
+/* Tarjetas Misión y Visión */
 .mision,
 .vision {
-    flex: 1 1 300px;
-    background: #f8f8f8;
-    padding: 20px;
-    border-radius: 12px;
+    flex: 1 1 350px;
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
+}
+
+/* Efecto hover */
+.mision:hover,
+.vision:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos de las tarjetas */
+.mision h2,
+.vision h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #00796b;
+    margin-bottom: 15px;
+}
+
+/* Texto de las tarjetas */
+.mision p,
+.vision p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
