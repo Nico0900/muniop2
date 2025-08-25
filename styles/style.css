@@ -2,7 +2,7 @@
 
 /*Colors*/
 :root {
-    
+
     /* paleta de colores graneros */
     --color-1: #0D5963;
     --color-2: #AECD61;
@@ -18,7 +18,7 @@
     --text-color: #32363B;
 
     /* header */
-    --color-header-background: #0D5963 ;
+    --color-header-background: #0D5963;
 
     /* sidebar */
     --color-icons-sidebar: #0D5963;
@@ -299,7 +299,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.5rem;
+    border-radius: 4.5rem;
     transition: all 0.3s ease;
 }
 
@@ -316,6 +316,51 @@ header {
 .right .user {
     width: 2.1rem;
     border-radius: 50%;
+}
+
+/* Ícono persona dentro */
+.right .person img {
+    filter: none;
+    /* elimina el invert */
+    width: 1.6rem;
+    margin: 0.5rem;
+    /* convierte el SVG negro a #053D4E */
+    filter: invert(16%) sepia(18%) saturate(2394%) hue-rotate(158deg) brightness(95%) contrast(98%);
+}
+
+.person {
+    background-color: white;
+}
+
+/* Tooltip en hover para el botón persona */
+.right .person {
+    position: relative; /* necesario para ubicar el tooltip */
+    background-color: white;
+    color: #053D4E;
+}
+
+/* Texto del tooltip */
+.right .person::after {
+    content: "Intranet"; /* texto que aparece */
+    position: absolute;
+    bottom: -1.8rem; /* debajo del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #053D4E;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Mostrar en hover */
+.right .person:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(2px);
 }
 
 /*Sidebar*/
@@ -361,7 +406,7 @@ header {
     background-color: var(--backgroung-emergency-color);
 }
 
-.icon{
+.icon {
     filter: invert(19%) sepia(67%) saturate(5202%) hue-rotate(164deg) brightness(93%) contrast(92%);
 }
 

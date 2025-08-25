@@ -8,13 +8,13 @@
     <title>Municipalidad de Graneros</title>
 
     <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <link rel="stylesheet" href="styles/style.css"> <!-- estilo generales -->
     <link rel="stylesheet" href="styles/text-styles.css"> <!-- letras y titulos -->
     <link rel="stylesheet" href="styles/card.css"> <!-- card de noticias -->
     <link rel="stylesheet" href="styles/modal.css"> <!-- modal de noticias -->
-    <!-- <link rel="stylesheet" href="styles/noticias-full.css"> diseño grid de noticias  -->
+    <link rel="stylesheet" href="styles/noticias-full.css"> <!-- diseño grid de noticias -->
     <link rel="stylesheet" href="styles/services.css"> <!-- diseños de pantalla de servicios -->
     <link rel="stylesheet" href="styles/mision.css"> <!-- diseño patalla mision -->
     <link rel="stylesheet" href="styles/contruccion.css"> <!-- pantalla construccion -->
@@ -57,6 +57,9 @@
             </a>
             <a href="https://whatsapp.com/channel/0029VazSREqHwXb4LrelIc2I" class="icons-header" target="_blank">
                 <img src="src/icons/whatsapp-black.svg" alt="whatsapp-black">
+            </a>
+            <a href="#" class="icons-header person" target="_blank">
+                <img src="src/icons/person-black.svg" alt="whatsapp-black">
             </a>
         </div>
     </header>
@@ -204,6 +207,9 @@
                     <a href="https://whatsapp.com/channel/0029VazSREqHwXb4LrelIc2I" target="_blank">
                         <img src="src/icons/whatsapp-black.svg" alt="whatsapp" class="icon">
                     </a>
+                    <!-- <a href="#" class="icons-header person" target="_blank">
+                        <img src="src/icons/person-black.svg" alt="whatsapp-black">
+                    </a> -->
                 </li>
             </ul>
         </nav>
@@ -425,7 +431,7 @@
         <section id="Mision" class="pantalla">
             <!-- Texto superior -->
             <section id="Mision">
-                <h1 class="titulo">Construyendo juntos el futuro de Graneros</h1>
+                <h3 class="titulo">Construyendo juntos el futuro de Graneros</h3>
 
                 <div class="intro">
                     <p>
@@ -547,109 +553,92 @@
             </div>
         </section>
 
-        <!-- pantalla de tramites -->
-        <section id="Tramites" class="pantalla p-6 bg-gray-50 min-h-screen">
+        <!-- pantalla de trámites -->
+        <section id="Tramites" class="pantalla">
 
             <!-- PAGOS EN LÍNEA -->
-            <h2 class="text-xl font-bold text-gray-700 mb-4">PAGOS EN LÍNEA</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4 mb-10">
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="landmark" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Pagos Ventanilla Única</span>
+            <h2>PAGOS EN LÍNEA</h2>
+            <div class="grid-botones">
+                <a href="#">
+                    <i data-lucide="landmark"></i>
+                    <span>Pagos Ventanilla Única</span>
                 </a>
-                <a href="https://www.sem2.gob.cl/tramites/permisos-de-circulacion-2c/69080300/buscar"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="car" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Permiso de Circulación</span>
+                <a href="https://www.sem2.gob.cl/tramites/permisos-de-circulacion-2c/69080300/buscar">
+                    <i data-lucide="car"></i>
+                    <span>Permiso de Circulación</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="gavel" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Causas Juzgado Policía Local</span>
+                <a href="#">
+                    <i data-lucide="gavel"></i>
+                    <span>Causas Juzgado Policía Local</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="ban" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Multas Restricción Vehicular</span>
+                <a href="#">
+                    <i data-lucide="ban"></i>
+                    <span>Multas Restricción Vehicular</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="shield-alert" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Multas COVID-19</span>
+                <a href="#">
+                    <i data-lucide="shield-alert"></i>
+                    <span>Multas COVID-19</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="home" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Aseo Domiciliario</span>
+                <a href="#">
+                    <i data-lucide="home"></i>
+                    <span>Aseo Domiciliario</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="package" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Cubicaciones y Escombros</span>
+                <a href="#">
+                    <i data-lucide="package"></i>
+                    <span>Cubicaciones y Escombros</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="brush-cleaning" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Aseo Extraordinario</span>
+                <a href="#">
+                    <i data-lucide="brush-cleaning"></i>
+                    <span>Aseo Extraordinario</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="file-text" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Patentes Municipales</span>
+                <a href="#">
+                    <i data-lucide="file-text"></i>
+                    <span>Patentes Municipales</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="folder" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Permisos y Concesiones</span>
+                <a href="#">
+                    <i data-lucide="folder"></i>
+                    <span>Permisos y Concesiones</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="handshake" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Pago de Convenios</span>
+                <a href="#">
+                    <i data-lucide="handshake"></i>
+                    <span>Pago de Convenios</span>
                 </a>
             </div>
 
             <!-- SOLICITUDES -->
-            <h2 class="text-xl font-bold text-gray-700 mb-4">SOLICITUDES</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4 mb-10">
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="calendar" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Sesamu</span>
+            <h2>SOLICITUDES</h2>
+            <div class="grid-botones">
+                <a href="#">
+                    <i data-lucide="calendar"></i>
+                    <span>Sesamu</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="laptop" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Ventanilla Digital</span>
+                <a href="#">
+                    <i data-lucide="laptop"></i>
+                    <span>Ventanilla Digital</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="building" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Obras Municipales</span>
+                <a href="#">
+                    <i data-lucide="building"></i>
+                    <span>Obras Municipales</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="id-card" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Departamento de Tránsito</span>
+                <a href="#">
+                    <i data-lucide="id-card"></i>
+                    <span>Departamento de Tránsito</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="hotel" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Rubros Turísticos</span>
+                <a href="#">
+                    <i data-lucide="hotel"></i>
+                    <span>Rubros Turísticos</span>
                 </a>
-                <a href="https://www.bcn.cl/leychile/navegar?idNorma=1023143"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="scale" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Trámites Ley 20.500</span>
+                <a href="https://www.bcn.cl/leychile/navegar?idNorma=1023143">
+                    <i data-lucide="scale"></i>
+                    <span>Trámites Ley 20.500</span>
                 </a>
-                <a href="#"
-                    class="flex flex-col items-center p-4 bg-white rounded-2xl shadow hover:bg-gray-100 transition">
-                    <i data-lucide="tree-pine" class="w-8 h-8 mb-2"></i>
-                    <span class="text-sm text-center">Uso de Espacios Públicos</span>
+                <a href="#">
+                    <i data-lucide="tree-pine"></i>
+                    <span>Uso de Espacios Públicos</span>
                 </a>
             </div>
         </section>
+
 
     </main>
 
@@ -678,7 +667,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- scripts de swiper para las cards -->
     <script src="/controllers/noticias.js"></script> <!-- controlador del llamado y muestra de noticias -->
-    <!-- <script src="controllers/noticias-full.js"></script> controlador del llamado y muestra de noticias -->
+    <script src="controllers/noticias-full.js"></script> <!-- controlador del llamado y muestra de noticias -->
     <script src="controllers/dorpdown.js"></script> <!-- controlador del dropdown del sidebar del menu principal -->
     <script src="controllers/vista-activa.js"></script> <!-- controlador de visual activa -->
     <!-- Tu script -->
