@@ -11,7 +11,6 @@
         body {
             height: 100%;
             overflow: hidden;
-            /* 🚫 evita scroll en móviles/tablets */
         }
     </style>
 </head>
@@ -20,13 +19,12 @@
 
     <!-- Imagen de fondo -->
     <div class="absolute inset-0">
-        <img src="../src/images/jpg/paisaje.jpg"
-            alt="Fondo institucional" class="w-full h-full object-cover">
+        <img src="../src/images/jpg/paisaje.jpg" alt="Fondo institucional" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
     </div>
 
     <!-- Contenedor de login -->
-    <div class="relative z-10 w-11/12 max-w-md bg-white rounded-2xl shadow-lg p-8">
+    <div class="relative z-10 w-11/12 max-w-md bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8">
         <!-- Logo Municipalidad -->
         <div class="flex justify-center mb-6">
             <img src="../src/images/png/Logos municipalidad de Graneros-10.png" alt="Logo Municipalidad de Graneros"
@@ -35,19 +33,21 @@
 
         <form action="#" method="POST" class="space-y-4">
             <div>
-                <label class="block text-sm font-medium text-gray-600">Usuario</label>
-                <input type="text" name="usuario" required
-                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <label class="block text-sm font-medium text-gray-700">Usuario</label>
+                <input type="text" name="usuario" required placeholder="Ingresa tu usuario" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white/90 shadow-inner 
+                    placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 
+                    focus:border-transparent transition duration-300 hover:shadow-md">
             </div>
             <div>
-                <label class="block text-sm font-medium text-gray-600">Contraseña</label>
-                <input type="password" name="password" required
-                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <label class="block text-sm font-medium text-gray-700">Contraseña</label>
+                <input type="password" name="password" required placeholder="Ingresa tu contraseña" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white/90 shadow-inner 
+                    placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 
+                    focus:border-transparent transition duration-300 hover:shadow-md">
             </div>
 
             <!-- Botón login -->
             <button type="submit"
-                class="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition">
+                class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition shadow-md hover:shadow-lg">
                 Ingresar
             </button>
 
@@ -67,19 +67,19 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 
-             1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442
-             -.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 
-             9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                       1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442
+                       -.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 
+                       9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
             </svg>
         </button>
 
         <!-- Tooltip arriba -->
         <span
-            class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition bg-gray-800 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-md">
+            class="absolute -top-9 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition bg-gray-800 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-md">
             Asistencia
         </span>
     </div>
-
+    <script type="module" src="src/firebase.js"></script>
 </body>
 
 </html>
