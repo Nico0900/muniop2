@@ -10,17 +10,17 @@
     <!-- Tailwind CDN -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
-    <link rel="stylesheet" href="styles/style.css"> <!-- estilo generales -->
-    <link rel="stylesheet" href="styles/text-styles.css"> <!-- letras y titulos -->
-    <link rel="stylesheet" href="styles/card.css"> <!-- card de noticias -->
-    <link rel="stylesheet" href="styles/modal.css"> <!-- modal de noticias -->
-    <link rel="stylesheet" href="styles/noticias-full.css"> <!-- diseño grid de noticias -->
-    <link rel="stylesheet" href="styles/services.css"> <!-- diseños de pantalla de servicios -->
-    <link rel="stylesheet" href="styles/mision.css"> <!-- diseño patalla mision -->
-    <link rel="stylesheet" href="styles/contruccion.css"> <!-- pantalla construccion -->
-    <link rel="stylesheet" href="styles/links-interes.css"> <!-- diseño de link de interes -->
-    <link rel="stylesheet" href="styles/tramites.css">
-    <link rel="stylesheet" href="/styles/footer.css"> <!-- diseño del footer de la pagina -->
+    <link rel="stylesheet" href="styles/style.css?v=1"> <!-- estilo generales -->
+    <link rel="stylesheet" href="styles/text-styles.css?v=1"> <!-- letras y titulos -->
+    <link rel="stylesheet" href="styles/card.css?v=1"> <!-- card de noticias -->
+    <link rel="stylesheet" href="styles/modal.css?v=1"> <!-- modal de noticias -->
+    <!-- <link rel="stylesheet" href="styles/noticias-full.css?v=1"> diseño grid de noticias -->
+    <link rel="stylesheet" href="styles/services.css?v=1"> <!-- diseños de pantalla de servicios -->
+    <link rel="stylesheet" href="styles/mision.css?v=1"> <!-- diseño patalla mision -->
+    <link rel="stylesheet" href="styles/contruccion.css?v=1"> <!-- pantalla construccion -->
+    <link rel="stylesheet" href="styles/links-interes.css?v=1"> <!-- diseño de link de interes -->
+    <link rel="stylesheet" href="styles/tramites.css?v=1">
+    <link rel="stylesheet" href="/styles/footer.css?v=1"> <!-- diseño del footer de la pagina -->
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- cdn de los diseños de swiper -->
@@ -58,9 +58,9 @@
             <a href="https://whatsapp.com/channel/0029VazSREqHwXb4LrelIc2I" class="icons-header" target="_blank">
                 <img src="src/icons/whatsapp-black.svg" alt="whatsapp-black">
             </a>
-            <a href="#" class="icons-header person" target="_blank">
+            <!-- <a href="#" class="icons-header person" target="_blank">
                 <img src="src/icons/person-black.svg" alt="whatsapp-black">
-            </a>
+            </a> -->
         </div>
     </header>
     <div class="sidebar" id="sidebar">
@@ -494,19 +494,26 @@
 
         <!-- Sección de grid de noticias -->
         <section id="Noticias" class="pantalla">
-            <div class="container">
+            <div id="construccion" class="construccion">
+                <h1>🚧 Sitio en Construcción</h1>
+                <br>
+                <p>Estamos trabajando para traerte una mejor experiencia. ¡Vuelve pronto!</p>
+                <br>
+                <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="Construcción">
+            </div>
+            <!-- <div class="container">
                 <h2>Noticias</h2>
                 <div id="noticias-container-full" class="noticias-grid-full"></div>
-            </div>
+            </div> -->
         </section>
 
         <!-- Sección de noticia individual -->
-        <section id="NoticiaID" class="pantalla">
+        <!-- <section id="NoticiaID" class="pantalla">
             <div class="container">
                 <h2>Detalle de Noticia</h2>
                 <div id="noticia-detalle-full" class="noticias-grid-full"></div>
             </div>
-        </section>
+        </section> -->
 
         <!-- pantalla de servicios -->
         <section id="Servicios" class="pantalla">
@@ -666,12 +673,12 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- scripts de swiper para las cards -->
-    <script src="/controllers/noticias.js"></script> <!-- controlador del llamado y muestra de noticias -->
-    <script src="controllers/noticias-full.js"></script> <!-- controlador del llamado y muestra de noticias -->
-    <script src="controllers/dorpdown.js"></script> <!-- controlador del dropdown del sidebar del menu principal -->
-    <script src="controllers/vista-activa.js"></script> <!-- controlador de visual activa -->
+    <script src="/controllers/noticias.js?v=1"></script> <!-- controlador del llamado y muestra de noticias -->
+    <!-- <script src="controllers/noticias-full.js?v=1"></script> controlador del llamado y muestra de noticias -->
+    <script src="controllers/dorpdown.js?v=1"></script> <!-- controlador del dropdown del sidebar del menu principal -->
+    <script src="controllers/vista-activa.js?v=1"></script> <!-- controlador de visual activa -->
     <!-- Tu script -->
-    <script src="/controllers/script.js"></script> <!-- controlador del menu (hambuerguesa) -->
+    <script src="/controllers/script.js?v=1"></script> <!-- controlador del menu (hambuerguesa) -->
 </body>
 
 </html>

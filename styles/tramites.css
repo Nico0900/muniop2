@@ -21,6 +21,14 @@
     margin-bottom: 2rem;
 }
 
+/* En pantallas pequeñas (teléfono): 2 botones por fila */
+@media (max-width: 640px) {
+    #Tramites .grid-botones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 /* Botones */
 #Tramites a {
     display: flex;
@@ -31,7 +39,7 @@
     background-color: #ffffff;
     border: 2px solid #c6e7f1;
     border-radius: 1rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     transition: background-color 0.3s, transform 0.2s;
 }
