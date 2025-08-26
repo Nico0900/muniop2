@@ -3,17 +3,25 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Login Intranet</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            /* 🚫 evita scroll en móviles/tablets */
+        }
+    </style>
 </head>
 
-<body class="h-screen w-screen flex items-center justify-center bg-gray-900 relative">
+<body class="min-h-screen h-screen w-screen flex items-center justify-center bg-gray-900 relative">
 
     <!-- Imagen de fondo -->
     <div class="absolute inset-0">
         <img src="../src/images/jpg/paisaje.jpg"
-            alt="Fondo institucional" class="w-full h-full object-cover opacity-80">
+            alt="Fondo institucional" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
     </div>
 
@@ -75,5 +83,3 @@
 </body>
 
 </html>
-
-
