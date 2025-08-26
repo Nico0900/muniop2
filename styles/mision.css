@@ -1,9 +1,9 @@
-
 /* Estilo general del contenedor */
 #Mision {
-    padding: 18px 20px;
+    padding: 40px 20px;
     text-align: center;
     background: #e0f7fa;
+    min-height: 100dvh;
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
