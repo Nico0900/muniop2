@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Intranet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen w-screen flex items-center justify-center bg-gray-900 relative">
+
+    <!-- Imagen de fondo -->
+    <div class="absolute inset-0">
+        <img src="../src/images/jpg/paisaje.jpg"
+            alt="Fondo institucional" class="w-full h-full object-cover opacity-80">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    </div>
+
+    <!-- Contenedor de login -->
+    <div class="relative z-10 w-11/12 max-w-md bg-white rounded-2xl shadow-lg p-8">
+        <!-- Logo Municipalidad -->
+        <div class="flex justify-center mb-6">
+            <img src="../src/images/png/Logos municipalidad de Graneros-10.png" alt="Logo Municipalidad de Graneros"
+                class="h-20 md:h-24 object-contain">
+        </div>
+
+        <form action="#" method="POST" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-600">Usuario</label>
+                <input type="text" name="usuario" required
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-600">Contraseña</label>
+                <input type="password" name="password" required
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Botón login -->
+            <button type="submit"
+                class="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition">
+                Ingresar
+            </button>
+
+            <!-- Olvidaste tu contraseña -->
+            <div class="text-center mt-3">
+                <a href="#" class="text-sm text-blue-600 hover:underline">
+                    ¿Olvidaste tu contraseña?
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Botón de asistencia fuera del contenedor -->
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 group z-20">
+        <button
+            class="flex items-center justify-center w-12 h-12 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full shadow-lg transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 
+             1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442
+             -.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 
+             9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>
+        </button>
+
+        <!-- Tooltip arriba -->
+        <span
+            class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition bg-gray-800 text-white text-xs font-medium px-2 py-1 rounded-lg shadow-md">
+            Asistencia
+        </span>
+    </div>
+
+</body>
+
+</html>
+
+
