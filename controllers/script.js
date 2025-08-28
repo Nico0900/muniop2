@@ -22,8 +22,32 @@ setInitialMenuState();
 window.addEventListener('resize', setInitialMenuState);
 
 // Toggle con el botón
-menu.addEventListener('click', () => {
+menu.addEventListener('click', (e) => {
+    e.stopPropagation(); // evita que dispare el listener global
     sidebar.classList.toggle('menu-toggle');
     main.classList.toggle('menu-toggle');
     menu.classList.toggle('rotated'); // rotación
+});
+
+// Cerrar sidebar al hacer click fuera
+document.addEventListener("click", (e) => {
+    // Si está abierto y el click no está en el sidebar ni en el botón
+    if (
+        sidebar.classList.contains("menu-toggle") &&
+        !sidebar.contains(e.target) &&
+        !menu.contains(e.target)
+    ) {
+        sidebar.classList.remove("menu-toggle");
+        main.classList.remove("menu-toggle");
+        menu.classList.remove("rotated");
+    }
+}, true); // true para que capte bien antes de otros handlers
+
+// Cerrar sidebar al hacer click en cualquier link del sidebar
+sidebar.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        sidebar.classList.remove("menu-toggle");
+        main.classList.remove("menu-toggle");
+        menu.classList.remove("rotated");
+    });
 });
