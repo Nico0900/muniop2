@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="styles/text-styles.css?v=4"> <!-- letras y titulos -->
     <link rel="stylesheet" href="styles/card.css?v=4"> <!-- card de noticias -->
     <link rel="stylesheet" href="styles/modal.css?v=4"> <!-- modal de noticias -->
+    <link rel="stylesheet" href="styles/popup.css">
     <!-- <link rel="stylesheet" href="styles/noticias-full.css?v=1"> diseño grid de noticias -->
     <link rel="stylesheet" href="styles/services.css?v=4"> <!-- diseños de pantalla de servicios -->
     <link rel="stylesheet" href="styles/mision.css?v=4"> <!-- diseño patalla mision -->
     <link rel="stylesheet" href="styles/contruccion.css?v=4"> <!-- pantalla construccion -->
     <link rel="stylesheet" href="styles/links-interes.css?v=4"> <!-- diseño de link de interes -->
-    <link rel="stylesheet" href="styles/tramites.css?v=4">
-    <link rel="stylesheet" href="styles/footer.css?v=2"> <!-- diseño del footer de la pagina -->
+    <link rel="stylesheet" href="styles/tramites.css?v=4"> 
+    <link rel="stylesheet" href="styles/footer.css?v=4"> <!-- diseño del footer de la pagina -->
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- cdn de los diseños de swiper -->
@@ -29,7 +30,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="left">
             <div class="menu-container">
@@ -265,10 +265,11 @@
                             <img src="src/images/jpg/banners/N-emergencia_banner.jpg" alt="Emergencia">
                         </picture>
                     </a>
-                    
+
                     <a href="src/pdf/BASES DE CONVOCATORIA FIESTAS PATRIAS.pdf" target="_blank">
                         <picture>
-                            <source media="(min-width: 1024px)" srcset="src/images/jpg/banners/VENTA-DE-PUESTOS-LARGA.jpg">
+                            <source media="(min-width: 1024px)"
+                                srcset="src/images/jpg/banners/VENTA-DE-PUESTOS-LARGA.jpg">
                             <source media="(max-width: 1023px)"
                                 srcset="src/images/jpg/banners/VENTA-DE-PUESTOS-CORTO.jpg">
                             <img src="src/images/jpg/banners/VENTA-DE-PUESTOS-LARGA.jpg" alt="Emergencia">
@@ -314,7 +315,7 @@
                             <img src="src/images/jpg/botones/n-emergencia.png" alt="n-emergencia">
                         </a>
                         <a href="src/pdf/BASES DE CONVOCATORIA FIESTAS PATRIAS.pdf" target="_blank" class="grid-item">
-                            <img src="src/images/jpg/botones/VENTA-DE-PUSTOS-1X1.jpg" alt="n-emergencia">
+                            <img src="src/images/jpg/botones/VENTA-DE-PUSTOS-1X1.jpg" alt="venta de puestos">
                         </a>
                     </div>
                 </div>
@@ -680,6 +681,19 @@
         </div>
     </div>
 
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <a href="src/pdf/BASES DE CONVOCATORIA FIESTAS PATRIAS.pdf" target="_blank">
+                <img src="src/images/jpg/botones/VENTA-DE-PUSTOS-1X1.jpg" alt="venta de puestos">
+            </a>
+            <!-- Botón cerrar dentro del contenido, sobre la imagen -->
+            <span class="popup-close">&times;</span>
+        </div>
+    </div>
+
+
+
     <!-- Cargar Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -693,7 +707,8 @@
     <script src="controllers/dorpdown.js?v=3"></script> <!-- controlador del dropdown del sidebar del menu principal -->
     <script src="controllers/vista-activa.js?v=3"></script> <!-- controlador de visual activa -->
     <!-- Tu script -->
-    <script src="/controllers/script.js?v=3"></script> <!-- controlador del menu (hambuerguesa) -->
+    <script src="controllers/popup.js"></script> <!-- controlador del popup al momento de ingerso a la pagina -->
+    <script src="controllers/script.js?v=3"></script> <!-- controlador del menu (hambuerguesa) -->
 </body>
 
 </html>
