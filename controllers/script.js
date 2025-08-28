@@ -31,7 +31,6 @@ menu.addEventListener('click', (e) => {
 
 // Cerrar sidebar al hacer click fuera
 document.addEventListener("click", (e) => {
-    // Si está abierto y el click no está en el sidebar ni en el botón
     if (
         sidebar.classList.contains("menu-toggle") &&
         !sidebar.contains(e.target) &&
@@ -41,13 +40,20 @@ document.addEventListener("click", (e) => {
         main.classList.remove("menu-toggle");
         menu.classList.remove("rotated");
     }
-}, true); // true para que capte bien antes de otros handlers
+}, true);
 
-// Cerrar sidebar al hacer click en cualquier link del sidebar
+// Cerrar sidebar al hacer click en cualquier link del sidebar,
+// excepto el botón principal del dropdown "Municipio"
 sidebar.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-        sidebar.classList.remove("menu-toggle");
-        main.classList.remove("menu-toggle");
-        menu.classList.remove("rotated");
+    link.addEventListener("click", (e) => {
+        const isDropdownBtn = link.classList.contains("dropbtn"); // el botón principal
+
+        if (!isDropdownBtn) {
+            // Cierra el sidebar normalmente
+            sidebar.classList.remove("menu-toggle");
+            main.classList.remove("menu-toggle");
+            menu.classList.remove("rotated");
+        } 
+        // Si es el botón "Municipio" (dropbtn), no hace nada, solo abre/cierra su lista
     });
 });
