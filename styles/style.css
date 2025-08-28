@@ -112,51 +112,59 @@ header {
 
 .carousel-track {
     display: flex;
-    width: 400%;
-    /* 4 banners */
-    animation: slide 16s infinite;
+    width: 500%;
+    /* 5 banners */
+    animation: slide 20s infinite;
     /* ajustar tiempo según cantidad */
 }
 
 .carousel-track a {
-    width: 25%;
-    /* 100% / 4 banners */
+    width: 20%;
+    /* 100% / 5 banners */
     display: block;
     flex-shrink: 0;
 }
 
-/* Animación para 4 banners */
+/* Animación para 5 banners */
 @keyframes slide {
     0% {
         transform: translateX(0%);
     }
 
-    20% {
+    16% {
         transform: translateX(0%);
     }
 
-    25% {
-        transform: translateX(-25%);
+    20% {
+        transform: translateX(-20%);
     }
 
-    45% {
-        transform: translateX(-25%);
+    36% {
+        transform: translateX(-20%);
     }
 
-    50% {
-        transform: translateX(-50%);
+    40% {
+        transform: translateX(-40%);
     }
 
-    70% {
-        transform: translateX(-50%);
+    56% {
+        transform: translateX(-40%);
     }
 
-    75% {
-        transform: translateX(-75%);
+    60% {
+        transform: translateX(-60%);
     }
 
-    95% {
-        transform: translateX(-75%);
+    76% {
+        transform: translateX(-60%);
+    }
+
+    80% {
+        transform: translateX(-80%);
+    }
+
+    96% {
+        transform: translateX(-80%);
     }
 
     100% {
@@ -169,6 +177,7 @@ header {
     width: 100%;
     display: block;
 }
+
 
 /*Menu*/
 .menu-container {
@@ -334,16 +343,19 @@ header {
 
 /* Tooltip en hover para el botón persona */
 .right .person {
-    position: relative; /* necesario para ubicar el tooltip */
+    position: relative;
+    /* necesario para ubicar el tooltip */
     background-color: white;
     color: #053D4E;
 }
 
 /* Texto del tooltip */
 .right .person::after {
-    content: "Intranet"; /* texto que aparece */
+    content: "Intranet";
+    /* texto que aparece */
     position: absolute;
-    bottom: -1.8rem; /* debajo del botón */
+    bottom: -1.8rem;
+    /* debajo del botón */
     left: 50%;
     transform: translateX(-50%);
     background-color: #053D4E;
