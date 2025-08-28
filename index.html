@@ -20,13 +20,11 @@
     <link rel="stylesheet" href="styles/mision.css?v=4"> <!-- diseño patalla mision -->
     <link rel="stylesheet" href="styles/contruccion.css?v=4"> <!-- pantalla construccion -->
     <link rel="stylesheet" href="styles/links-interes.css?v=4"> <!-- diseño de link de interes -->
-    <link rel="stylesheet" href="styles/tramites.css?v=4"> 
+    <link rel="stylesheet" href="styles/tramites.css?v=4">
     <link rel="stylesheet" href="styles/footer.css?v=4"> <!-- diseño del footer de la pagina -->
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- cdn de los diseños de swiper -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- cnd para iconos de fonts awesome -->
 </head>
 
 <body>
@@ -511,18 +509,11 @@
                 <br>
                 <!-- <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="Construcción"> -->
             </div>
-            <!-- <div class="container">
-                <h2>Noticias</h2>
-                <div id="noticias-container-full" class="noticias-grid-full"></div>
-            </div> -->
         </section>
-
-        <!-- Sección de noticia individual -->
-        <!-- <section id="NoticiaID" class="pantalla">
-            <div class="container">
-                <h2>Detalle de Noticia</h2>
-                <div id="noticia-detalle-full" class="noticias-grid-full"></div>
-            </div>
+        <div class="container">
+            <h2>Detalle de Noticia</h2>
+            <div id="noticia-detalle-full" class="noticias-grid-full"></div>
+        </div>
         </section> -->
 
         <!-- pantalla de servicios -->
@@ -665,21 +656,38 @@
 
     </main>
 
-    <!-- Modal Noticia -->
-    <div id="modal-noticia" class="modal">
+    <!-- Modal para imagen en grande -->
+    <div id="mostrar-imagen" class="modal">
+        <span class="close">&times;</span>
+        <img id="imagen-noticia" src="" alt="Imagen ampliada"
+            style="max-width: 90%; max-height: 90%; margin: auto; display: block; border-radius:8px;">
+    </div>
+
+    <!-- modal de noticias list -->
+    <div class="modal" id="modal-noticia">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <span id="modal-tipo" class="tipo-noticia"></span>
-            <h2 id="modal-titulo"></h2>
-            <div id="modal-contenido"></div>
-            <!-- Galería Masonry -->
-            <div id="modal-galeria" class="modal-galeria"></div>
-            <div class="modal-footer">
-                <img id="modal-perfil" alt="Perfil Noticia" />
-                <span>Municipalidad de Graneros</span>
+
+            <div class="modal-body">
+                <!-- Lado izquierdo: Galería/slider -->
+                <div class="modal-left" id="modal-galeria">
+                    <!-- JS llenará las imágenes aquí -->
+                </div>
+
+                <!-- Lado derecho: Noticia -->
+                <div class="modal-right">
+                    <span class="tipo-noticia" id="modal-tipo"></span>
+                    <h2 id="modal-titulo"></h2>
+                    <div id="modal-contenido"></div>
+                    <div class="modal-footer">
+                        <img id="modal-perfil" src="" alt="Perfil Noticia">
+                        <span>Municipalidad de Graneros</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 
     <!-- Popup Modal -->
     <div id="popup" class="popup">
@@ -709,6 +717,7 @@
     <!-- Tu script -->
     <script src="controllers/popup.js"></script> <!-- controlador del popup al momento de ingerso a la pagina -->
     <script src="controllers/script.js?v=3"></script> <!-- controlador del menu (hambuerguesa) -->
+    <script src="controllers/zoom-modal.js"></script>
 </body>
 
 </html>
