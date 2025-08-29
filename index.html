@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/style.css?v=4"> <!-- estilo generales -->
     <link rel="stylesheet" href="styles/text-styles.css?v=4"> <!-- letras y titulos -->
     <link rel="stylesheet" href="styles/card.css?v=4"> <!-- card de noticias -->
-    <link rel="stylesheet" href="styles/modal.css?v=4"> <!-- modal de noticias -->
+    <link rel="stylesheet" href="styles/modal.css?v=5"> <!-- modal de noticias -->
     <link rel="stylesheet" href="styles/popup.css">
     <!-- <link rel="stylesheet" href="styles/noticias-full.css?v=1"> diseño grid de noticias -->
     <link rel="stylesheet" href="styles/services.css?v=4"> <!-- diseños de pantalla de servicios -->
@@ -657,37 +657,34 @@
 
     </main>
 
-    <!-- Modal para imagen en grande -->
-    <div id="mostrar-imagen" class="modal">
-        <span class="close">&times;</span>
-        <img id="imagen-noticia" src="" alt="Imagen ampliada"
-            style="max-width: 90%; max-height: 90%; margin: auto; display: block; border-radius:8px;">
-    </div>
-
     <!-- modal de noticias list -->
     <div class="modal" id="modal-noticia">
         <div class="modal-content">
             <span class="close">&times;</span>
 
             <div class="modal-body">
-                <!-- Lado izquierdo: Galería/slider -->
-                <div class="modal-left" id="modal-galeria">
-                    <!-- JS llenará las imágenes aquí -->
-                </div>
-
-                <!-- Lado derecho: Noticia -->
-                <div class="modal-right">
-                    <span class="tipo-noticia" id="modal-tipo"></span>
-                    <h2 id="modal-titulo"></h2>
-                    <div id="modal-contenido"></div>
-                    <div class="modal-footer">
-                        <img id="modal-perfil" src="" alt="Perfil Noticia">
-                        <span>Municipalidad de Graneros</span>
-                    </div>
+                <span class="tipo-noticia" id="modal-tipo"></span>
+                <h2 id="modal-titulo"></h2>
+                <div id="modal-contenido"></div>
+                <!-- Galería Masonry -->
+                <div class="modal-galeria" id="modal-galeria"></div>
+                <div class="modal-footer">
+                    <img id="modal-perfil" src="" alt="Perfil Noticia">
+                    <span>Municipalidad de Graneros</span>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- modal para ver imagen individual -->
+    <div class="modal" id="modal-imagen">
+        <div class="modal-content2">
+            <span class="close" id="close-imagen">&times;</span>
+            <img id="imagen-grande" src="" alt="Imagen ampliada" style="width:100%; border-radius:12px;">
+        </div>
+    </div>
+
+
 
 
     <!-- Popup Modal -->
@@ -711,7 +708,7 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- scripts de swiper para las cards -->
-    <script src="/controllers/noticias.js?v=3"></script> <!-- controlador del llamado y muestra de noticias -->
+    <script src="/controllers/noticias.js?v=4"></script> <!-- controlador del llamado y muestra de noticias -->
     <!-- <script src="controllers/noticias-full.js?v=1"></script> controlador del llamado y muestra de noticias -->
     <script src="controllers/dorpdown.js?v=3"></script> <!-- controlador del dropdown del sidebar del menu principal -->
     <script src="controllers/vista-activa.js?v=3"></script> <!-- controlador de visual activa -->
