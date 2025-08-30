@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/card.css?v=4"> <!-- card de noticias -->
     <link rel="stylesheet" href="styles/modal.css?v=5"> <!-- modal de noticias -->
     <link rel="stylesheet" href="styles/popup.css">
-    <!-- <link rel="stylesheet" href="styles/noticias-full.css?v=1"> diseño grid de noticias -->
+    <link rel="stylesheet" href="styles/noticias-grid.css">
     <link rel="stylesheet" href="styles/services.css?v=4"> <!-- diseños de pantalla de servicios -->
     <link rel="stylesheet" href="styles/mision.css?v=4"> <!-- diseño patalla mision -->
     <link rel="stylesheet" href="styles/contruccion.css?v=4"> <!-- pantalla construccion -->
@@ -504,18 +504,25 @@
 
         <!-- Sección de grid de noticias -->
         <section id="Noticias" class="pantalla">
-            <div id="construccion" class="construccion">
-                <h1>🚧 Sitio en Construcción</h1>
-                <br>
-                <p>Estamos trabajando para traerte una mejor experiencia. ¡Vuelve pronto!</p>
-                <br>
-                <!-- <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="Construcción"> -->
+            <div class="container">
+                <h2>Noticias</h2>
+                <div class="noticias-grid">
+                </div>
             </div>
-            <!-- <div class="container">
-                <h2>Detalle de Noticia</h2>
-                <div id="noticia-detalle-full" class="noticias-grid-full"></div>
-            </div> -->
         </section>
+
+        <!-- Modal Noticias Grid -->
+        <div id="modal-noticias-grid" class="modal-grid">
+            <div class="modal-content-grid">
+                <span class="close" onclick="cerrarModalNoticia()">&times;</span>
+                <div class="modal-body-grid">
+                    <h2 id="modal-grid-titulo"></h2>
+                    <p id="modal-grid-contenido"></p>
+                    <div id="modal-grid-galeria"></div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- pantalla de servicios -->
         <section id="Servicios" class="pantalla">
@@ -686,6 +693,23 @@
 
 
 
+    <!-- Modal Noticias Grid -->
+    <div id="modal-noticias-grid" class="modal-grid">
+        <div class="modal-content-grid"> <span class="close" onclick="cerrarModalNoticia()">&times;</span>
+            <div class="modal-body-grid">
+                <h2 id="modal-grid-titulo"></h2>
+                <p id="modal-grid-contenido"></p>
+                <div id="modal-grid-galeria"></div>
+            </div>
+        </div>
+    </div> <!-- Modal Imagen Grande -->
+    <div id="modal-imagen2" class="modal-grid">
+        <div class="modal-content3"> <span class="close" onclick="cerrarModalImagen()">&times;</span> <img
+                id="imagen-grande2" src="" alt="Imagen grande"> </div>
+    </div>
+
+
+
 
     <!-- Popup Modal -->
     <div id="popup" class="popup">
@@ -709,7 +733,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- scripts de swiper para las cards -->
     <script src="/controllers/noticias.js?v=4"></script> <!-- controlador del llamado y muestra de noticias -->
-    <!-- <script src="controllers/noticias-full.js?v=1"></script> controlador del llamado y muestra de noticias -->
+    <script src="controllers/noticia-grid.js"></script>
     <script src="controllers/dorpdown.js?v=3"></script> <!-- controlador del dropdown del sidebar del menu principal -->
     <script src="controllers/vista-activa.js?v=3"></script> <!-- controlador de visual activa -->
     <!-- Tu script -->
