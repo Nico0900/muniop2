@@ -101,7 +101,7 @@ header {
     border-radius: 15px;
 }
 
-/* Carrusel CSS puro */
+/* Carrusel CSS puro - 6 banners */
 .carousel {
     width: 100%;
     max-width: 1200px;
@@ -112,59 +112,67 @@ header {
 
 .carousel-track {
     display: flex;
-    width: 500%;
-    /* 5 banners */
-    animation: slide 20s infinite;
-    /* ajustar tiempo según cantidad */
+    width: 600%;
+    /* 6 banners */
+    animation: slide 30s infinite;
+    /* 30 segundos total - 5 segundos por banner */
 }
 
 .carousel-track a {
-    width: 20%;
-    /* 100% / 5 banners */
+    width: 16.666%;
+    /* 100% / 6 banners */
     display: block;
     flex-shrink: 0;
 }
 
-/* Animación para 5 banners */
+/* Animación para 6 banners - 5 segundos cada uno */
 @keyframes slide {
     0% {
         transform: translateX(0%);
     }
 
-    16% {
+    15% {
         transform: translateX(0%);
     }
 
-    20% {
-        transform: translateX(-20%);
+    16.666% {
+        transform: translateX(-16.666%);
     }
 
-    36% {
-        transform: translateX(-20%);
+    31.666% {
+        transform: translateX(-16.666%);
     }
 
-    40% {
-        transform: translateX(-40%);
+    33.333% {
+        transform: translateX(-33.333%);
     }
 
-    56% {
-        transform: translateX(-40%);
+    48.333% {
+        transform: translateX(-33.333%);
     }
 
-    60% {
-        transform: translateX(-60%);
+    50% {
+        transform: translateX(-50%);
     }
 
-    76% {
-        transform: translateX(-60%);
+    65% {
+        transform: translateX(-50%);
     }
 
-    80% {
-        transform: translateX(-80%);
+    66.666% {
+        transform: translateX(-66.666%);
     }
 
-    96% {
-        transform: translateX(-80%);
+    81.666% {
+        transform: translateX(-66.666%);
+    }
+
+    83.333% {
+        transform: translateX(-83.333%);
+    }
+
+    98.333% {
+        transform: translateX(-83.333%);
     }
 
     100% {

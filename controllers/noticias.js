@@ -13,14 +13,79 @@ const modalImagen = document.getElementById("modal-imagen");
 const imagenGrande = document.getElementById("imagen-grande");
 const closeImagen = document.getElementById("close-imagen");
 
-// Función para abrir modal individual de imagen
-function abrirImagenModal(src) {
-    imagenGrande.src = src;
-    modalImagen.style.display = "block";
+// Variables para navegación de imágenes
+let imagenesActuales = [];
+let indiceImagenActual = 0;
+
+// Función para abrir modal individual de imagen con navegación
+function abrirImagenModal(src, todasLasImagenes = []) {
+    imagenesActuales = todasLasImagenes.length > 0 ? todasLasImagenes : [src];
+    indiceImagenActual = imagenesActuales.findIndex(img => img === src);
+
+    mostrarImagenEnModal();
+    modalImagen.style.display = "flex";
 }
+
+// Función para mostrar imagen actual en el modal
+function mostrarImagenEnModal() {
+    imagenGrande.src = imagenesActuales[indiceImagenActual];
+
+    // Actualizar contador
+    const contador = document.getElementById("contador-imagenes");
+    if (contador) {
+        contador.textContent = `${indiceImagenActual + 1} / ${imagenesActuales.length}`;
+    }
+
+    // Habilitar/deshabilitar botones de navegación
+    const btnPrev = document.getElementById("btn-prev-imagen");
+    const btnNext = document.getElementById("btn-next-imagen");
+
+    if (btnPrev) btnPrev.disabled = indiceImagenActual === 0;
+    if (btnNext) btnNext.disabled = indiceImagenActual === imagenesActuales.length - 1;
+}
+
+// Navegación de imágenes
+function imagenAnterior() {
+    if (indiceImagenActual > 0) {
+        indiceImagenActual--;
+        mostrarImagenEnModal();
+    }
+}
+
+function imagenSiguiente() {
+    if (indiceImagenActual < imagenesActuales.length - 1) {
+        indiceImagenActual++;
+        mostrarImagenEnModal();
+    }
+}
+
+// Event listeners para navegación con teclado
+document.addEventListener('keydown', (e) => {
+    if (modalImagen.style.display === 'flex') {
+        switch (e.key) {
+            case 'ArrowLeft':
+                e.preventDefault();
+                imagenAnterior();
+                break;
+            case 'ArrowRight':
+                e.preventDefault();
+                imagenSiguiente();
+                break;
+            case 'Escape':
+                e.preventDefault();
+                modalImagen.style.display = "none";
+                break;
+        }
+    } else if (modal.style.display === 'block' && e.key === 'Escape') {
+        e.preventDefault();
+        modal.style.display = "none";
+    }
+});
 
 // Cerrar modal individual de imagen
 closeImagen.onclick = () => modalImagen.style.display = "none";
+
+// Event listeners mejorados para cerrar modales
 window.onclick = e => {
     if (e.target == modalImagen) modalImagen.style.display = "none";
     if (e.target == modal) modal.style.display = "none";
@@ -67,14 +132,39 @@ fetch("../json/noticias.json")
                     modalContenido.appendChild(parrafo);
                 });
 
-                // Galería Masonry
+                // Galería Grid mejorada
                 modalGaleria.innerHTML = "";
-                noticia.galeria.forEach(imgSrc => {
+                modalGaleria.className = "modal-galeria-grid";
+
+                noticia.galeria.forEach((imgSrc, index) => {
+                    const imgContainer = document.createElement("div");
+                    imgContainer.className = "imagen-container";
+
                     const img = document.createElement("img");
                     img.src = imgSrc;
-                    img.alt = "Imagen noticia";
-                    img.onclick = () => abrirImagenModal(imgSrc);
-                    modalGaleria.appendChild(img);
+                    img.alt = `Imagen ${index + 1} de ${noticia.titulo}`;
+                    img.loading = "lazy";
+
+                    // Overlay con icono de expansión
+                    const overlay = document.createElement("div");
+                    overlay.className = "imagen-overlay";
+                    overlay.innerHTML = `
+                        <div class="expand-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15,3 21,3 21,9"></polyline>
+                                <polyline points="9,21 3,21 3,15"></polyline>
+                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                            </svg>
+                        </div>
+                    `;
+
+                    imgContainer.appendChild(img);
+                    imgContainer.appendChild(overlay);
+
+                    imgContainer.onclick = () => abrirImagenModal(imgSrc, noticia.galeria);
+
+                    modalGaleria.appendChild(imgContainer);
                 });
 
                 modal.style.display = "block";
@@ -95,6 +185,10 @@ fetch("../json/noticias.json")
                 2100: { slidesPerView: 5 }
             }
         });
+    })
+    .catch(error => {
+        console.error('Error al cargar las noticias:', error);
+        noticiasContainer.innerHTML = '<p>Error al cargar las noticias. Inténtalo más tarde.</p>';
     });
 
 // Cerrar modal noticia
