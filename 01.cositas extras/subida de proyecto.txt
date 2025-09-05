@@ -1,2 +1,0 @@
-git pull origin main  # si existen cambios en GitHub
-npx wrangler deploy --assets=./
